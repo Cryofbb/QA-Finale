@@ -44,14 +44,14 @@
 
 Сроки реализации
 
-1. Исследование приложения - 19.04
-2. Создание чек-листа - 20.04
-3. Создание тест-кейсов - 21.04
-4. Автоматизация тестов - 01.05
-5. Составление отчета - 05.05
+- [X] Исследование приложения - 19.04
+- [ ] Создание чек-листа - 20.04
+- [ ] Создание тест-кейсов - 21.04
+- [ ] Автоматизация тестов - 01.05
+- [ ] Составление отчета - 05.05
 
-- [ ] [Чек-лист](https://github.com/Cryofbb/QA-Finale/blob/main/Check.xlsx)
+[Чек-лист](https://github.com/Cryofbb/QA-Finale/blob/main/Check.xlsx)
 
-- [ ] [Тест-кейсы](https://github.com/Cryofbb/QA-Finale/blob/main/Cases.xlsx)
+[Тест-кейсы](https://github.com/Cryofbb/QA-Finale/blob/main/Cases.xlsx)
 
-- [ ] [Отчет](https://github.com/Cryofbb/QA-Finale/blob/main/Result.md)
+[Отчет](https://github.com/Cryofbb/QA-Finale/blob/main/Result.md)
