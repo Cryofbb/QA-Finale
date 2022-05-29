@@ -2,9 +2,6 @@ package ru.fmhandroid;
 
 import android.os.Environment;
 
-import androidx.test.espresso.IdlingRegistry;
-
-import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 
