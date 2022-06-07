@@ -18,6 +18,6 @@ import ru.iteco.fmhandroid.R;
 public class AuthElements {
     public ViewInteraction loginField = onView(allOf(withHint("Login"), withParent(withParent(withId(R.id.login_text_input_layout)))));
     public ViewInteraction passwordField = onView(allOf(withHint("Password"), withParent(withParent(withId(R.id.password_text_input_layout)))));
-    public ViewInteraction enter = onView(allOf(withId(R.id.enter_button), withText("Sign in"), withContentDescription("Save"),childAtPosition(childAtPosition(withClassName(is("android.widget.RelativeLayout")),1),2),isDisplayed()));
-    public ViewInteraction screen = onView(allOf(withText("Authorization"),withParent(withParent(withId(R.id.nav_host_fragment))),isDisplayed()));
+    public ViewInteraction enter = onView(allOf(withId(R.id.enter_button), withText("Sign in"), withContentDescription("Save"), childAtPosition(childAtPosition(withClassName(is("android.widget.RelativeLayout")), 1), 2), isDisplayed()));
+    public ViewInteraction screen = onView(allOf(withText("Authorization"), withParent(withParent(withId(R.id.nav_host_fragment))), isDisplayed()));
 }

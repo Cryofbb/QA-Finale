@@ -16,28 +16,24 @@ public class MenuScreen {
 
     public void openClaims() {
         menuClick();
-        Menu.claims.check(matches(isClickable()));
         Menu.claims.perform(click());
         Menu.claimsScreen.check(matches(isDisplayed()));
     }
 
     public void openNews() {
         menuClick();
-        Menu.news.check(matches(isClickable()));
         Menu.news.perform(click());
         Menu.newsScreen.check(matches(isDisplayed()));
     }
 
     public void openAbout() {
         menuClick();
-        Menu.about.check(matches(isClickable()));
         Menu.about.perform(click());
         Menu.aboutScreen.check(matches(isDisplayed()));
     }
 
     public void openMain() {
         menuClick();
-        Menu.main.check(matches(isClickable()));
         Menu.main.perform(click());
         Menu.mainScreen.check(matches(isDisplayed()));
     }

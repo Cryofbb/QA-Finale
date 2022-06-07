@@ -3,7 +3,6 @@ package ru.iteco.fmhandroid.ui.elements;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-
 import static org.hamcrest.Matchers.allOf;
 
 import androidx.test.espresso.ViewInteraction;
@@ -27,3 +26,4 @@ public class MenuElements {
     public ViewInteraction mainScreen = onView(withId(R.id.all_news_text_view));
     public ViewInteraction logo = onView(withId(R.id.trademark_image_view));
 }
+

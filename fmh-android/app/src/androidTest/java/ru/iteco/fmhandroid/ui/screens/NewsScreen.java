@@ -10,7 +10,7 @@ import ru.iteco.fmhandroid.ui.elements.NewsElements;
 public class NewsScreen {
     NewsElements News = new NewsElements();
 
-    public void onNewsScreen() {
+    public void onScreen() {
         News.screen.check(matches(isDisplayed()));
     }
 

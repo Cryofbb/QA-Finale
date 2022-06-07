@@ -11,17 +11,21 @@ import ru.iteco.fmhandroid.ui.elements.AboutElements;
 
 public class AboutScreen {
     AboutElements About = new AboutElements();
-    public void onScreen(){
+
+    public void onScreen() {
         About.title.check(matches(isDisplayed()));
     }
-    public void checkVersion(){
+
+    public void checkVersion() {
         About.version.check(matches(allOf(withText("1.0.0"), isDisplayed())));
     }
-    public void checkLinks(){
+
+    public void checkLinks() {
         About.terms.check(matches(allOf(withText("https://vhospice.org/#/terms-of-use"), isDisplayed(), isClickable())));
         About.privacy.check(matches(allOf(withText("https://vhospice.org/#/privacy-policy/"), isDisplayed(), isClickable())));
     }
-    public void backButton(){
+
+    public void backButton() {
         About.back.perform(click());
     }
 }

@@ -1,9 +1,17 @@
 package ru.iteco.fmhandroid.ui.screens;
 
+import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
+
+import static org.hamcrest.Matchers.anything;
+import static org.hamcrest.Matchers.is;
+import static ru.iteco.fmhandroid.ui.utils.Utils.childAtPosition;
+
+import android.os.SystemClock;
 
 import ru.iteco.fmhandroid.ui.elements.CreateClaimElements;
 
@@ -34,7 +42,8 @@ public class CreateClaimScreen {
 
     public void enterExecutor() {
         Create.executor.perform(click());
-        Create.date.perform(click());
+        SystemClock.sleep(2000);
+        Create.title.perform(click());
     }
 
     public void save() {
@@ -49,4 +58,11 @@ public class CreateClaimScreen {
     public void checkFields() {
         Create.emptyFieldsWarning.check(matches(isDisplayed()));
     }
-}
+    public void chooseExe(){
+        SystemClock.sleep(2000);
+        onData(anything())
+                .inAdapterView(childAtPosition(
+                        withClassName(is("android.widget.PopupWindow$PopupBackgroundView")),
+                        0))
+                .atPosition(1);
+}}

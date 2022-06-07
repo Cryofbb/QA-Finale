@@ -2,6 +2,7 @@ package ru.iteco.fmhandroid.ui.utils;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.swipeDown;
 import static androidx.test.espresso.action.ViewActions.swipeUp;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition;
@@ -12,10 +13,16 @@ import static androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibilit
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withParent;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
+import static org.hamcrest.EasyMock2Matchers.equalTo;
 import static org.hamcrest.Matchers.allOf;
 
+import static kotlin.jvm.internal.Intrinsics.checkNotNull;
+
+import android.app.Instrumentation;
 import android.os.IBinder;
 import android.os.SystemClock;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
@@ -30,6 +37,10 @@ import androidx.test.espresso.Root;
 import androidx.test.espresso.UiController;
 import androidx.test.espresso.ViewAction;
 import androidx.test.espresso.ViewInteraction;
+import androidx.test.espresso.action.CoordinatesProvider;
+import androidx.test.espresso.action.GeneralLocation;
+import androidx.test.espresso.action.Press;
+import androidx.test.espresso.action.Swipe;
 import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.espresso.util.HumanReadables;
 
@@ -206,7 +217,7 @@ public class Utils {
                 return false;
             }
             try {
-                locator.check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));//.check(matches(isDisplayed()));
+                locator.check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
                 invis = false;
             } catch (NoMatchingViewException e) {
                 invis = true;
@@ -243,9 +254,9 @@ public class Utils {
         while (invis) {
             try {
                 if (recycler == 1) {
-                    onView(allOf(withId(R.id.news_list_recycler_view), isDisplayed())).perform(actionOnItemAtPosition(n, swipeUp()));
+                    onView(allOf(withId(R.id.news_list_recycler_view), isDisplayed())).perform(actionOnItemAtPosition(n, swipeDown()));
                 } else {
-                    onView(allOf(withId(R.id.claim_list_recycler_view), isDisplayed())).perform(actionOnItemAtPosition(n, swipeUp()));
+                    onView(allOf(withId(R.id.claim_list_recycler_view), isDisplayed())).perform(actionOnItemAtPosition(n, swipeDown()));
                 }
             } catch (PerformException e) {
                 return false;
@@ -260,9 +271,9 @@ public class Utils {
             if (!invis & finishSwipe) {
                 try {
                     if (recycler == 1) {
-                        onView(allOf(withId(R.id.news_list_recycler_view), isDisplayed())).perform(actionOnItemAtPosition(n, swipeUp()));
+                        onView(allOf(withId(R.id.news_list_recycler_view), isDisplayed())).perform(actionOnItemAtPosition(n, swipeDown()));
                     } else {
-                        onView(allOf(withId(R.id.claim_list_recycler_view), isDisplayed())).perform(actionOnItemAtPosition(n, swipeUp()));
+                        onView(allOf(withId(R.id.claim_list_recycler_view), isDisplayed())).perform(actionOnItemAtPosition(n, swipeDown()));
                     }
                 } catch (PerformException e) {
                     return false;
@@ -271,7 +282,7 @@ public class Utils {
             if (n > 400) {
                 return false;
             }
-            SystemClock.sleep(2000);
+            SystemClock.sleep(1000);
         }
         ;
         return true;
@@ -288,6 +299,7 @@ public class Utils {
         DateFormat dateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
         return dateFormat.format(currentDate);
     }
+
     public static class ToastMatcher extends TypeSafeMatcher<Root> {
 
         @Override
@@ -307,5 +319,9 @@ public class Utils {
             }
             return false;
         }
+    }
+    public static Matcher<Object> withItemContent(String expectedText) {
+        checkNotNull(expectedText);
+        return withItemContent(equalTo(expectedText));
     }
 }

@@ -44,6 +44,7 @@ public class AuthTest {
             path.mkdirs();
         }
     }
+
     @Before
     public void authCheck() {
         SystemClock.sleep(3000);
@@ -63,6 +64,7 @@ public class AuthTest {
                 .inRoot(new Utils.ToastMatcher())
                 .check(matches(isDisplayed()));
     }
+
     @Test
     @DisplayName("Проверка входа с заполнением пробелами формой")
     public void blankAuth() {
@@ -74,6 +76,7 @@ public class AuthTest {
                 .inRoot(new Utils.ToastMatcher())
                 .check(matches(isDisplayed()));
     }
+
     @Test
     @DisplayName("Проверка входа с неверными данными")
     public void wrongAuth() {
@@ -96,5 +99,4 @@ public class AuthTest {
         SystemClock.sleep(2500);
         Menu.logOut();
     }
-
 }
