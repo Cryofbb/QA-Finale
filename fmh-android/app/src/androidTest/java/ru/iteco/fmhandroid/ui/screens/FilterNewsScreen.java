@@ -34,4 +34,10 @@ public class FilterNewsScreen {
     public void cancel() {
         Filter.cancel.perform(click());
     }
+    public void active() {
+        Filter.active.perform(click());
+    }
+    public void notActive() {
+        Filter.notActive.perform(click());
+    }
 }

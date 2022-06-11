@@ -14,4 +14,6 @@ public class FilterNewsElements {
     public ViewInteraction dateEnd = onView(withId(R.id.news_item_publish_date_end_text_input_edit_text));
     public ViewInteraction apply = onView(withId(R.id.filter_button));
     public ViewInteraction cancel = onView(withId(R.id.cancel_button));
+    public ViewInteraction active = onView(withId(R.id.filter_news_active_material_check_box));
+    public ViewInteraction notActive = onView(withId(R.id.filter_news_inactive_material_check_box));
 }

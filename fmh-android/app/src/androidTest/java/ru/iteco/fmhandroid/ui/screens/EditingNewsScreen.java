@@ -1,13 +1,28 @@
 package ru.iteco.fmhandroid.ui.screens;
 
+import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition;
 import static androidx.test.espresso.matcher.ViewMatchers.isChecked;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.isNotChecked;
+import static androidx.test.espresso.matcher.ViewMatchers.withChild;
+import static androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibility;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withParent;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.not;
 
+import static ru.iteco.fmhandroid.ui.utils.Utils.isDisplayedWithSwipe;
+
+import android.os.SystemClock;
+
+import androidx.test.espresso.matcher.ViewMatchers;
+
+import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.elements.EditNewsElements;
 
 public class EditingNewsScreen {
@@ -21,9 +36,13 @@ public class EditingNewsScreen {
         News.delete.perform(click());
         News.okPopup.perform(click());
     }
+    public void deleteWithTitle(String title){
+        onView(allOf(withId(R.id.delete_news_item_image_view), withParent(withParent(allOf(withId(R.id.news_item_material_card_view), withChild(withChild(withText(title)))))))).perform(click());
+        News.okPopup.perform(click());
+    }
 
-    public void edit() {
-        News.edit.perform(click());
+    public void edit(String title) {
+        onView(allOf(withId(R.id.edit_news_item_image_view), withParent(withParent(allOf(withId(R.id.news_item_material_card_view), withChild(withChild(withText(title)))))))).perform(click());
         News.editing.check(matches(isDisplayed()));
     }
 
@@ -54,6 +73,16 @@ public class EditingNewsScreen {
     public void enterDescription(String description) {
         News.editDescription.perform(replaceText(description));
     }
+    public void expandSingleNews() {
+        News.titleIndex.perform(click());
+        //News.title.perform(actionOnItemAtPosition(0, click()));
+        News.description.check(matches(isDisplayed()));
+    }
+
+    public void collapseSingleNews() {
+        News.status.perform(click());
+        News.descriptionCollapsed.check(matches(not(isDisplayed())));
+    }
 
     public void enterDate(String date) {
         News.editDate.perform(replaceText(date));
@@ -65,6 +94,13 @@ public class EditingNewsScreen {
 
     public void saveButton() {
         News.save.perform(click());
+        SystemClock.sleep(1500);
+    }
+    public void checkDate(String text) {
+        News.date.check(matches(withText(text)));
+    }
+    public void editStatus() {
+        News.editStatus.perform(click());
     }
 
     public void checkboxActive() {
@@ -88,6 +124,11 @@ public class EditingNewsScreen {
             News.checkboxNotActive.check(matches(isChecked()));
         } else {
             News.checkboxNotActive.check(matches(isNotChecked()));
+        }
+    }
+    public void checkIsDisplayed(String title){
+        if (isDisplayedWithSwipe(onView(withText(title)), 1, true)) {
+            onView(withText(title)).check(matches(isDisplayed()));
         }
     }
 }

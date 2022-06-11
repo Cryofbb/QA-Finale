@@ -53,6 +53,7 @@ public class SingleClaimScreen {
         openProcessing();
         Claim.cancel.perform(click());
     }
+    public void status(){}
 
     public void editClaim() {
         Claim.editClaim.perform(click());
