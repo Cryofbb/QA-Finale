@@ -2,7 +2,6 @@ package ru.iteco.fmhandroid.ui.utils;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
-import static androidx.test.espresso.action.ViewActions.swipeDown;
 import static androidx.test.espresso.action.ViewActions.swipeUp;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition;
@@ -13,16 +12,12 @@ import static androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibilit
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withParent;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 import static org.hamcrest.EasyMock2Matchers.equalTo;
 import static org.hamcrest.Matchers.allOf;
-
 import static kotlin.jvm.internal.Intrinsics.checkNotNull;
 
-import android.app.Instrumentation;
 import android.os.IBinder;
 import android.os.SystemClock;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
@@ -37,8 +32,8 @@ import androidx.test.espresso.Root;
 import androidx.test.espresso.UiController;
 import androidx.test.espresso.ViewAction;
 import androidx.test.espresso.ViewInteraction;
-import androidx.test.espresso.action.CoordinatesProvider;
 import androidx.test.espresso.action.GeneralLocation;
+import androidx.test.espresso.action.GeneralSwipeAction;
 import androidx.test.espresso.action.Press;
 import androidx.test.espresso.action.Swipe;
 import androidx.test.espresso.matcher.ViewMatchers;
@@ -243,51 +238,6 @@ public class Utils {
         return true;
     }
 
-    public static boolean fastDown(ViewInteraction locator, int recycler, boolean finishSwipe) {
-        try {
-            locator.check(matches(isDisplayed()));
-            return true;
-        } catch (NoMatchingViewException ignored) {
-        }
-        boolean invis = true;
-        int n = 1;
-        while (invis) {
-            try {
-                if (recycler == 1) {
-                    onView(allOf(withId(R.id.news_list_recycler_view), isDisplayed())).perform(actionOnItemAtPosition(n, swipeDown()));
-                } else {
-                    onView(allOf(withId(R.id.claim_list_recycler_view), isDisplayed())).perform(actionOnItemAtPosition(n, swipeDown()));
-                }
-            } catch (PerformException e) {
-                return false;
-            }
-            try {
-                locator.check(matches(isDisplayed()));
-                invis = false;
-            } catch (NoMatchingViewException e) {
-                invis = true;
-            }
-            n++;
-            if (!invis & finishSwipe) {
-                try {
-                    if (recycler == 1) {
-                        onView(allOf(withId(R.id.news_list_recycler_view), isDisplayed())).perform(actionOnItemAtPosition(n, swipeDown()));
-                    } else {
-                        onView(allOf(withId(R.id.claim_list_recycler_view), isDisplayed())).perform(actionOnItemAtPosition(n, swipeDown()));
-                    }
-                } catch (PerformException e) {
-                    return false;
-                }
-            }
-            if (n > 400) {
-                return false;
-            }
-            SystemClock.sleep(1000);
-        }
-        ;
-        return true;
-    }
-
     public static String getCurrentDate() {
         Date currentDate = new Date();
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
@@ -320,8 +270,20 @@ public class Utils {
             return false;
         }
     }
+
     public static Matcher<Object> withItemContent(String expectedText) {
         checkNotNull(expectedText);
         return withItemContent(equalTo(expectedText));
     }
+
+    public static ViewAction swipeDownSlow() {
+        return new GeneralSwipeAction(Swipe.SLOW, GeneralLocation.TOP_CENTER,
+                GeneralLocation.CENTER, Press.FINGER);
+    }
+
+    public static ViewAction swipeUpSlow() {
+        return new GeneralSwipeAction(Swipe.SLOW, GeneralLocation.BOTTOM_CENTER,
+                GeneralLocation.CENTER, Press.FINGER);
+    }
 }
+

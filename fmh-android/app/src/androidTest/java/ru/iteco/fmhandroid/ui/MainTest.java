@@ -27,12 +27,13 @@ import org.junit.runner.RunWith;
 import java.io.File;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
+import io.qameta.allure.kotlin.Allure;
 import io.qameta.allure.kotlin.junit4.DisplayName;
 import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.screens.AuthScreen;
 import ru.iteco.fmhandroid.ui.screens.ClaimsScreen;
 import ru.iteco.fmhandroid.ui.screens.CreateClaimScreen;
-import ru.iteco.fmhandroid.ui.screens.FilterClaimsScreen;
+import ru.iteco.fmhandroid.ui.screens.FilterScreen;
 import ru.iteco.fmhandroid.ui.screens.MainScreen;
 import ru.iteco.fmhandroid.ui.screens.MenuScreen;
 
@@ -43,7 +44,7 @@ public class MainTest {
     MenuScreen Menu = new MenuScreen();
     MainScreen Main = new MainScreen();
     CreateClaimScreen Claim = new CreateClaimScreen();
-    FilterClaimsScreen Filter = new FilterClaimsScreen();
+    FilterScreen Filter = new FilterScreen();
     ClaimsScreen ClaimScreen = new ClaimsScreen();
 
     @Rule
@@ -140,9 +141,11 @@ public class MainTest {
         ClaimScreen.filter();
         Filter.openCheck();
         Filter.apply();
+        Allure.step("Скролл вниз");
         RecyclerView recyclerView = mActivityTestRule.getActivity().findViewById(R.id.claim_list_recycler_view);
         onView(withId(R.id.claim_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(recyclerView.getAdapter().getItemCount() - 1));
         SystemClock.sleep(5000);
+        Allure.step("Скролл вверх для проверки наличия заявки");
         onView(withId(R.id.claim_list_recycler_view)).perform(repeatedlyUntil(swipeDown(), hasDescendant(withText(title)), 10));
     }
 }

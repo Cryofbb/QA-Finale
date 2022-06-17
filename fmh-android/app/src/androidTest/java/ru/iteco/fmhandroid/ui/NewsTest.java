@@ -1,18 +1,8 @@
 package ru.iteco.fmhandroid.ui;
 
 import static androidx.test.espresso.Espresso.closeSoftKeyboard;
-import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.action.ViewActions.click;
-import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static androidx.test.espresso.matcher.ViewMatchers.withChild;
-import static androidx.test.espresso.matcher.ViewMatchers.withId;
-import static androidx.test.espresso.matcher.ViewMatchers.withParent;
-import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.Matchers.allOf;
 import static ru.iteco.fmhandroid.ui.utils.Utils.getCurrentDate;
 import static ru.iteco.fmhandroid.ui.utils.Utils.getCurrentTime;
-import static ru.iteco.fmhandroid.ui.utils.Utils.isDisplayedWithSwipe;
 
 import android.os.Environment;
 import android.os.SystemClock;
@@ -30,13 +20,9 @@ import java.io.File;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.junit4.DisplayName;
-import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.screens.AuthScreen;
-import ru.iteco.fmhandroid.ui.screens.ClaimsScreen;
-import ru.iteco.fmhandroid.ui.screens.CreateClaimScreen;
-import ru.iteco.fmhandroid.ui.screens.EditingNewsScreen;
-import ru.iteco.fmhandroid.ui.screens.FilterClaimsScreen;
-import ru.iteco.fmhandroid.ui.screens.FilterNewsScreen;
+import ru.iteco.fmhandroid.ui.screens.CreateNewsScreen;
+import ru.iteco.fmhandroid.ui.screens.FilterScreen;
 import ru.iteco.fmhandroid.ui.screens.MainScreen;
 import ru.iteco.fmhandroid.ui.screens.MenuScreen;
 import ru.iteco.fmhandroid.ui.screens.NewsScreen;
@@ -47,11 +33,9 @@ public class NewsTest {
     AuthScreen Auth = new AuthScreen();
     MenuScreen Menu = new MenuScreen();
     MainScreen Main = new MainScreen();
-    CreateClaimScreen Claim = new CreateClaimScreen();
-    FilterNewsScreen Filter = new FilterNewsScreen();
-    ClaimsScreen ClaimScreen = new ClaimsScreen();
+    FilterScreen Filter = new FilterScreen();
     NewsScreen News = new NewsScreen();
-    EditingNewsScreen Edit = new EditingNewsScreen();
+    CreateNewsScreen Edit = new CreateNewsScreen();
     String date = getCurrentDate();
     String time = getCurrentTime();
     String title = "Title " + getCurrentTime();
@@ -163,6 +147,10 @@ public class NewsTest {
         Edit.saveButton();
         News.filter();
         Filter.active();
+        Filter.apply();
+        Edit.checkIsDisplayed(title);
+        News.filter();
+        Filter.notActive();
         Filter.apply();
         Edit.checkIsDisplayed(title);
         Edit.deleteWithTitle(title);

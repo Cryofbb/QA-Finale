@@ -1,12 +1,5 @@
 package ru.iteco.fmhandroid.ui;
 
-import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.not;
-
 import android.os.Environment;
 import android.os.SystemClock;
 
@@ -21,11 +14,10 @@ import org.junit.runner.RunWith;
 import java.io.File;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
+import io.qameta.allure.kotlin.Allure;
 import io.qameta.allure.kotlin.junit4.DisplayName;
-import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.screens.AuthScreen;
 import ru.iteco.fmhandroid.ui.screens.MenuScreen;
-import ru.iteco.fmhandroid.ui.utils.Utils;
 
 @RunWith(AllureAndroidJUnit4.class)
 public class AuthTest {
@@ -60,9 +52,7 @@ public class AuthTest {
     public void emptyAuth() {
         Auth.onScreen();
         Auth.buttonClick();
-        onView(withText(R.string.empty_login_or_password))
-                .inRoot(new Utils.ToastMatcher())
-                .check(matches(isDisplayed()));
+        Auth.checkEmpty();
     }
 
     @Test
@@ -72,9 +62,7 @@ public class AuthTest {
         Auth.loginFill(" ");
         Auth.passwordFill(" ");
         Auth.buttonClick();
-        onView(withText(R.string.empty_login_or_password))
-                .inRoot(new Utils.ToastMatcher())
-                .check(matches(isDisplayed()));
+        Auth.checkEmpty();
     }
 
     @Test
@@ -84,9 +72,8 @@ public class AuthTest {
         Auth.loginFill("неверные");
         Auth.passwordFill("данные");
         Auth.buttonClick();
-        onView(withText(R.string.wrong_login_or_password))
-                .inRoot(new Utils.ToastMatcher())
-                .check(matches(isDisplayed()));
+        Allure.step("Отображение ");
+        Auth.checkWrong();
     }
 
     @Test

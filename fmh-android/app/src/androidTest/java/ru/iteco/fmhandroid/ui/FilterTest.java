@@ -2,11 +2,8 @@ package ru.iteco.fmhandroid.ui;
 
 import static androidx.test.espresso.Espresso.closeSoftKeyboard;
 import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.action.ViewActions.repeatedlyUntil;
 import static androidx.test.espresso.action.ViewActions.swipeDown;
-import static androidx.test.espresso.matcher.ViewMatchers.hasDescendant;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
-import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static ru.iteco.fmhandroid.ui.utils.Utils.checkClaimStatus;
@@ -16,10 +13,7 @@ import static ru.iteco.fmhandroid.ui.utils.Utils.getCurrentTime;
 import android.os.Environment;
 import android.os.SystemClock;
 
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.test.espresso.Espresso;
 import androidx.test.espresso.NoMatchingViewException;
-import androidx.test.espresso.contrib.RecyclerViewActions;
 import androidx.test.rule.ActivityTestRule;
 
 import org.junit.After;
@@ -35,27 +29,22 @@ import io.qameta.allure.kotlin.junit4.DisplayName;
 import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.screens.AuthScreen;
 import ru.iteco.fmhandroid.ui.screens.ClaimsScreen;
-import ru.iteco.fmhandroid.ui.screens.CreateClaimScreen;
-import ru.iteco.fmhandroid.ui.screens.EditingNewsScreen;
-import ru.iteco.fmhandroid.ui.screens.FilterClaimsScreen;
-import ru.iteco.fmhandroid.ui.screens.FilterNewsScreen;
-import ru.iteco.fmhandroid.ui.screens.MainScreen;
+import ru.iteco.fmhandroid.ui.screens.CreateNewsScreen;
+import ru.iteco.fmhandroid.ui.screens.FilterScreen;
 import ru.iteco.fmhandroid.ui.screens.MenuScreen;
 import ru.iteco.fmhandroid.ui.screens.NewsScreen;
-import ru.iteco.fmhandroid.utils.Utils;
 
 @RunWith(AllureAndroidJUnit4.class)
 
 public class FilterTest {
     AuthScreen Auth = new AuthScreen();
     MenuScreen Menu = new MenuScreen();
-    MainScreen Main = new MainScreen();
-    CreateClaimScreen Claim = new CreateClaimScreen();
-    FilterClaimsScreen FilterClaim = new FilterClaimsScreen();
+    FilterScreen Filter = new FilterScreen();
     ClaimsScreen ClaimScreen = new ClaimsScreen();
-    FilterNewsScreen FilterNews = new FilterNewsScreen();
     NewsScreen NewsScreen = new NewsScreen();
-    EditingNewsScreen Edit = new EditingNewsScreen();
+    CreateNewsScreen Edit = new CreateNewsScreen();
+    String date = getCurrentDate();
+    String time = getCurrentTime();
 
     @Rule
     public ActivityTestRule<AppActivity> mActivityTestRule = new ActivityTestRule<>(AppActivity.class);
@@ -89,9 +78,6 @@ public class FilterTest {
         Menu.logOut();
     }
 
-    String date = getCurrentDate();
-    String time = getCurrentTime();
-
     @Test
     @DisplayName("Фильтрация новостей из главного окна")
     public void filterNews() {
@@ -107,9 +93,10 @@ public class FilterTest {
         Edit.saveButton();
         Menu.openNews();
         NewsScreen.filter();
-        FilterNews.dateStart(date);
-        FilterNews.dateEnd(date);
-        FilterNews.apply();
+        Filter.onScreenNews();
+        Filter.dateStart(date);
+        Filter.dateEnd(date);
+        Filter.apply();
         NewsScreen.checkDate(date);
         NewsScreen.edit();
         Edit.deleteWithTitle(time);
@@ -129,9 +116,10 @@ public class FilterTest {
         closeSoftKeyboard();
         Edit.saveButton();
         NewsScreen.filter();
-        FilterNews.dateStart(date);
-        FilterNews.dateEnd(date);
-        FilterNews.apply();
+        Filter.onScreenNews();
+        Filter.dateStart(date);
+        Filter.dateEnd(date);
+        Filter.apply();
         Edit.checkDate(date);
         Edit.deleteWithTitle(time);
     }
@@ -148,6 +136,7 @@ public class FilterTest {
         assertEquals(newsStartTitle, NewsScreen.getTitleAgain());
         assertNotEquals(newsStartTitle, newsEndTitle);
     }
+
     @Test
     @DisplayName("Сортировка новостей в меню редактирования")
     public void sortEditNews() {
@@ -166,8 +155,9 @@ public class FilterTest {
     public void filterClaimOpen() {
         Menu.openClaims();
         ClaimScreen.filter();
-        FilterClaim.inProgressCheck();
-        FilterClaim.apply();
+        Filter.onScreenClaims();
+        Filter.inProgressCheck();
+        Filter.applyClaims();
         checkClaimStatus("Open");
     }
 
@@ -176,8 +166,9 @@ public class FilterTest {
     public void filterClaimInProgress() {
         Menu.openClaims();
         ClaimScreen.filter();
-        FilterClaim.openCheck();
-        FilterClaim.apply();
+        Filter.onScreenClaims();
+        Filter.openCheck();
+        Filter.applyClaims();
         checkClaimStatus("In progress");
     }
 
@@ -186,10 +177,11 @@ public class FilterTest {
     public void filterClaimExecuted() {
         Menu.openClaims();
         ClaimScreen.filter();
-        FilterClaim.openCheck();
-        FilterClaim.inProgressCheck();
-        FilterClaim.executedCheck();
-        FilterClaim.apply();
+        Filter.onScreenClaims();
+        Filter.openCheck();
+        Filter.inProgressCheck();
+        Filter.executedCheck();
+        Filter.apply();
         checkClaimStatus("Executed");
     }
 
@@ -198,10 +190,11 @@ public class FilterTest {
     public void filterClaimCanceled() {
         Menu.openClaims();
         ClaimScreen.filter();
-        FilterClaim.openCheck();
-        FilterClaim.inProgressCheck();
-        FilterClaim.cancelledCheck();
-        FilterClaim.apply();
+        Filter.onScreenClaims();
+        Filter.openCheck();
+        Filter.inProgressCheck();
+        Filter.cancelledCheck();
+        Filter.apply();
         checkClaimStatus("Canceled");
     }
 

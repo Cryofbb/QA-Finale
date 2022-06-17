@@ -4,7 +4,6 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 import static ru.iteco.fmhandroid.ui.utils.Utils.childAtPosition;
@@ -20,7 +19,6 @@ public class EditNewsElements {
     public ViewInteraction editing = onView(withText("Editing"));
     public ViewInteraction addNew = onView(withId(R.id.add_news_image_view));
     public ViewInteraction delete = onView(withIndex(withId(R.id.delete_news_item_image_view),0));
-    public ViewInteraction edit = onView(withId(R.id.edit_news_item_image_view));
     public ViewInteraction expand = onView(withId(R.id.view_news_item_image_view));
     public ViewInteraction title = onView(withId(R.id.news_item_title_text_view));
     public ViewInteraction titleIndex = onView(withIndex(withId(R.id.news_item_title_text_view),0));
@@ -41,9 +39,4 @@ public class EditNewsElements {
     public ViewInteraction emptyFieldsWarning = onView(withText("Fill empty fields"));
     public ViewInteraction checkboxActive = onView(withId(R.id.filter_news_active_material_check_box));
     public ViewInteraction checkboxNotActive = onView(withId(R.id.filter_news_inactive_material_check_box));
-    public ViewInteraction testTitle = onView(
-            allOf(withId(R.id.news_list_recycler_view),
-    childAtPosition(
-            withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")),
-            0)));
 }
