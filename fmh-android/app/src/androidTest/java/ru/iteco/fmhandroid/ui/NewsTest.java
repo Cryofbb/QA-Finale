@@ -149,10 +149,6 @@ public class NewsTest {
         Filter.active();
         Filter.apply();
         Edit.checkIsDisplayed(title);
-        News.filter();
-        Filter.notActive();
-        Filter.apply();
-        Edit.checkIsDisplayed(title);
         Edit.deleteWithTitle(title);
     }
 }

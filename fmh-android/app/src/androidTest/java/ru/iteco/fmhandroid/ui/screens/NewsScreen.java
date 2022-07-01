@@ -5,6 +5,8 @@ import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
+import static ru.iteco.fmhandroid.ui.utils.Utils.nestedScrollTo;
+
 import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.ui.elements.NewsElements;
 import ru.iteco.fmhandroid.ui.utils.Utils;
@@ -50,5 +52,9 @@ public class NewsScreen {
     public void checkDate(String text) {
         Allure.step("Проверка даты");
         News.date.check(matches(withText(text)));
+    }
+    public void scrollUp(){
+        News.title.perform(nestedScrollTo())
+                .check(matches(isDisplayed()));
     }
 }

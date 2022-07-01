@@ -2,7 +2,6 @@ package ru.iteco.fmhandroid.ui;
 
 import static androidx.test.espresso.Espresso.closeSoftKeyboard;
 import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.action.ViewActions.swipeDown;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -10,10 +9,11 @@ import static ru.iteco.fmhandroid.ui.utils.Utils.checkClaimStatus;
 import static ru.iteco.fmhandroid.ui.utils.Utils.getCurrentDate;
 import static ru.iteco.fmhandroid.ui.utils.Utils.getCurrentTime;
 
-import android.os.Environment;
 import android.os.SystemClock;
 
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.test.espresso.NoMatchingViewException;
+import androidx.test.espresso.contrib.RecyclerViewActions;
 import androidx.test.rule.ActivityTestRule;
 
 import org.junit.After;
@@ -21,8 +21,6 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import java.io.File;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.junit4.DisplayName;
@@ -48,16 +46,6 @@ public class FilterTest {
 
     @Rule
     public ActivityTestRule<AppActivity> mActivityTestRule = new ActivityTestRule<>(AppActivity.class);
-
-    @Before
-    public void createAllureDir() {
-        File path = new File(Environment.getExternalStorageDirectory().getAbsolutePath()
-                + "/allure-results/"
-        );
-        if (!path.exists()) {
-            path.mkdirs();
-        }
-    }
 
     @Before
     public void authCheck() {
@@ -130,9 +118,13 @@ public class FilterTest {
         Menu.openNews();
         String newsStartTitle = NewsScreen.getTitle();
         NewsScreen.sort();
+        RecyclerView recyclerView = mActivityTestRule.getActivity().findViewById(R.id.news_list_recycler_view);
+        onView(withId(R.id.news_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(0));
+        SystemClock.sleep(3000);
         String newsEndTitle = NewsScreen.getLastTitle();
         NewsScreen.sort();
-        onView(withId(R.id.news_list_recycler_view)).perform(swipeDown());
+        onView(withId(R.id.news_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(0));
+        SystemClock.sleep(3000);
         assertEquals(newsStartTitle, NewsScreen.getTitleAgain());
         assertNotEquals(newsStartTitle, newsEndTitle);
     }
@@ -142,12 +134,26 @@ public class FilterTest {
     public void sortEditNews() {
         Menu.openNews();
         NewsScreen.edit();
+        Edit.add();
+        Edit.categorySelect();
+        Edit.enterTitle(time);
+        Edit.enterDate(date);
+        Edit.enterTime(time);
+        Edit.enterDescription(date);
+        closeSoftKeyboard();
+        Edit.saveButton();
         String newsStartTitle = NewsScreen.getTitle();
         NewsScreen.sort();
+        RecyclerView recyclerView = mActivityTestRule.getActivity().findViewById(R.id.news_list_recycler_view);
+        onView(withId(R.id.news_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(0));
+        SystemClock.sleep(3000);
         String newsEndTitle = NewsScreen.getLastTitle();
         NewsScreen.sort();
+        onView(withId(R.id.news_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(0));
+        SystemClock.sleep(3000);
         assertEquals(newsStartTitle, NewsScreen.getTitleAgain());
         assertNotEquals(newsStartTitle, newsEndTitle);
+        Edit.deleteWithTitle(time);
     }
 
     @Test
@@ -181,7 +187,7 @@ public class FilterTest {
         Filter.openCheck();
         Filter.inProgressCheck();
         Filter.executedCheck();
-        Filter.apply();
+        Filter.applyClaims();
         checkClaimStatus("Executed");
     }
 
@@ -194,7 +200,7 @@ public class FilterTest {
         Filter.openCheck();
         Filter.inProgressCheck();
         Filter.cancelledCheck();
-        Filter.apply();
+        Filter.applyClaims();
         checkClaimStatus("Canceled");
     }
 

@@ -1,6 +1,5 @@
 package ru.iteco.fmhandroid.ui;
 
-import android.os.Environment;
 import android.os.SystemClock;
 
 import androidx.test.espresso.NoMatchingViewException;
@@ -10,8 +9,6 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import java.io.File;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.Allure;
@@ -26,16 +23,6 @@ public class AuthTest {
 
     @Rule
     public ActivityTestRule<AppActivity> mActivityTestRule = new ActivityTestRule<>(AppActivity.class);
-
-    @Before
-    public void createAllureDir() {
-        File path = new File(Environment.getExternalStorageDirectory().getAbsolutePath()
-                + "/allure-results/"
-        );
-        if (!path.exists()) {
-            path.mkdirs();
-        }
-    }
 
     @Before
     public void authCheck() {

@@ -42,6 +42,7 @@ public class SingleClaimElements {
     public ViewInteraction takeToWork = onView(withText("take to work"));
     public ViewInteraction toExecute = onView(withText("To execute"));
     public ViewInteraction throwOff = onView(withText("Throw off"));
+    public ViewInteraction closeClaim = onView(withText("Cancel"));
     public ViewInteraction editClaim = onView(withId(R.id.edit_processing_image_button));
     public ViewInteraction commentField = onView(withId(R.id.editText));
     public ViewInteraction okPopup = onView(withText("OK"));

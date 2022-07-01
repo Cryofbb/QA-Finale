@@ -140,7 +140,8 @@ public class MainTest {
         Main.openAllClaims();
         ClaimScreen.filter();
         Filter.openCheck();
-        Filter.apply();
+        Filter.applyClaims();
+        SystemClock.sleep(5000);
         Allure.step("Скролл вниз");
         RecyclerView recyclerView = mActivityTestRule.getActivity().findViewById(R.id.claim_list_recycler_view);
         onView(withId(R.id.claim_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(recyclerView.getAdapter().getItemCount() - 1));

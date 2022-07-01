@@ -9,14 +9,18 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDescendantOfA;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withChild;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
+import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withParent;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.endsWith;
 import static ru.iteco.fmhandroid.ui.utils.Utils.nestedScrollTo;
+import static ru.iteco.fmhandroid.ui.utils.Utils.withIndex;
 
 import android.os.SystemClock;
+
+import androidx.test.espresso.Espresso;
 
 import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
@@ -54,12 +58,15 @@ public class SingleClaimScreen {
 
     public void editComment(String title) {
         Allure.step("Редактирование комментария");
-        onView(allOf(withId(R.id.edit_comment_image_button),
+        onView(allOf(withId(R.id.edit_comment_image_button),withContentDescription("button edit comment"),
                 withParent(withParent(
-                        allOf(withId(R.id.comments_material_card_view),
+                        allOf(withId(R.id.claim_comments_list_recycler_view),
                                 withChild(withChild((
                                         withText(title))))))))).perform(click());
-        Claim.okPopup.perform(click());
+    }
+    public void editComment2() {
+        Allure.step("Редактирование комментария");
+        onView(withIndex(withId(R.id.edit_comment_image_button),0)).perform(click());
     }
 
     public void throwOff(String reason) {
@@ -69,7 +76,6 @@ public class SingleClaimScreen {
         Claim.throwOff.perform(click());
         SystemClock.sleep(1000);
         fillComment(reason);
-        Claim.okPopup.perform(click());
     }
 
     public void execute(String reason) {
@@ -78,7 +84,6 @@ public class SingleClaimScreen {
         SystemClock.sleep(1000);
         Claim.toExecute.perform(click());
         fillComment(reason);
-        Claim.okPopup.perform(click());
     }
 
     public void takeToWork() {
@@ -92,13 +97,15 @@ public class SingleClaimScreen {
         Allure.step("Отмена");
         Claim.processing.perform(click());
         SystemClock.sleep(1000);
-        Claim.cancel.perform(click());
+        Claim.closeClaim.perform(click());
     }
 
     public void status(String status) {
         Allure.step("Проверка статуса");
+        scrollUp();
         SystemClock.sleep(1000);
         Claim.status.check(matches(allOf(isDisplayed(), withText(status))));
+        scrollDown();
     }
 
     public void editClaim() {
@@ -121,5 +128,13 @@ public class SingleClaimScreen {
                 allOf(withId(R.id.comment_description_text_view), withText(text),
                         withParent(withParent(withId(R.id.claim_comments_list_recycler_view))),
                         isDisplayed()));
+    }
+    public void scrollDown(){
+        Claim.processing.perform(nestedScrollTo())
+                .check(matches(isDisplayed()));
+    }
+    public void scrollUp(){
+        Claim.title.perform(nestedScrollTo())
+                .check(matches(isDisplayed()));
     }
 }
