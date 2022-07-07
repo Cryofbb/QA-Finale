@@ -107,7 +107,7 @@ public class ClaimTest {
     @DisplayName("Отмена заявки")
     public void claimCancel() {
         ClaimScreen.addNew();
-        Claim.fillClaimAndCheckFields(date, time, title, description);
+        Claim.fillClaimAndCheckFields(date, time, "Заголовок " + title, description);
         Claim.save();
         ClaimScreen.filter();
         Filter.openCheck();
@@ -115,7 +115,7 @@ public class ClaimTest {
         Allure.step("Скрол до конца, поиск заявки");
         RecyclerView recyclerView = mActivityTestRule.getActivity().findViewById(R.id.claim_list_recycler_view);
         onView(withId(R.id.claim_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(recyclerView.getAdapter().getItemCount() - 1));
-        Claim.scrollDown(title);
+        Claim.scrollDown("Заголовок " + title);
         SingleClaim.throwOff("Drop");
         SingleClaim.status("Open");
         SingleClaim.cancel();
