@@ -1,0 +1,69 @@
+{
+    "name": "Проверка элементов загрузки",
+    "start": 1657185132656,
+    "stop": 1657185133194,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка отображения элементов загрузки",
+            "start": 1657185133044,
+            "stop": 1657185133044,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "83e216cd-8b05-44b0-8366-b49e1d9c89e7",
+    "historyId": "e32993e27ebace31de8f2b6fa472170c",
+    "fullName": "ru.iteco.fmhandroid.ui.LoadingTest.loadingElementsTest",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.LoadingTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "loadingElementsTest"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.LoadingTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(651)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

@@ -78,6 +78,7 @@ public class NewsTest {
     public void newsOpenInPanel() {
         News.edit();
         Edit.expandSingleNews();
+        SystemClock.sleep(1000);
         Edit.collapseSingleNews();
     }
 
