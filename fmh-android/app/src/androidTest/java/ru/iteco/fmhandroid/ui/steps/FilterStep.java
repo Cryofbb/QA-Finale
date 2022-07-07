@@ -1,4 +1,4 @@
-package ru.iteco.fmhandroid.ui.screens;
+package ru.iteco.fmhandroid.ui.steps;
 
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.replaceText;
@@ -8,7 +8,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.ui.elements.FilterElements;
 
-public class FilterScreen {
+public class FilterStep {
     FilterElements Filter = new FilterElements();
 
     public void onScreenClaims() {

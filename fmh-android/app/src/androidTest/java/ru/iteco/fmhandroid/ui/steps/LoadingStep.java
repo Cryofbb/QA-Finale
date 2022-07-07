@@ -1,4 +1,4 @@
-package ru.iteco.fmhandroid.ui.screens;
+package ru.iteco.fmhandroid.ui.steps;
 
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
@@ -6,7 +6,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.ui.elements.LoadingElements;
 
-public class LoadingScreen {
+public class LoadingStep {
     LoadingElements Loading = new LoadingElements();
 
     public void checkLoading() {

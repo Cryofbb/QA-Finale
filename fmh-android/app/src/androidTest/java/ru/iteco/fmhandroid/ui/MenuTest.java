@@ -16,20 +16,20 @@ import java.io.File;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.junit4.DisplayName;
-import ru.iteco.fmhandroid.ui.screens.AboutScreen;
-import ru.iteco.fmhandroid.ui.screens.AuthScreen;
-import ru.iteco.fmhandroid.ui.screens.MainScreen;
-import ru.iteco.fmhandroid.ui.screens.MenuScreen;
-import ru.iteco.fmhandroid.ui.screens.QuotesScreen;
+import ru.iteco.fmhandroid.ui.steps.AboutStep;
+import ru.iteco.fmhandroid.ui.steps.AuthStep;
+import ru.iteco.fmhandroid.ui.steps.MainStep;
+import ru.iteco.fmhandroid.ui.steps.MenuStep;
+import ru.iteco.fmhandroid.ui.steps.QuotesStep;
 
 @RunWith(AllureAndroidJUnit4.class)
 
 public class MenuTest {
-    AuthScreen Auth = new AuthScreen();
-    MenuScreen Menu = new MenuScreen();
-    QuotesScreen Quotes = new QuotesScreen();
-    AboutScreen About = new AboutScreen();
-    MainScreen Main = new MainScreen();
+    AuthStep Auth = new AuthStep();
+    MenuStep Menu = new MenuStep();
+    QuotesStep Quotes = new QuotesStep();
+    AboutStep About = new AboutStep();
+    MainStep Main = new MainStep();
 
     @Rule
     public ActivityTestRule<AppActivity> mActivityTestRule = new ActivityTestRule<>(AppActivity.class);
@@ -58,11 +58,6 @@ public class MenuTest {
         SystemClock.sleep(3000);
     }
 
-    @After
-    public void logOff() {
-        Menu.logOut();
-    }
-
     @Test
     @DisplayName("Открытие раздела цитат, сворачивание и разворачивание")
     public void quotesMenuCheck() {
@@ -77,7 +72,8 @@ public class MenuTest {
     @DisplayName("Открытие окна About, проверка ссылок и версии")
     public void aboutMenuCheck() {
         Menu.openAbout();
-        About.checkLinks();
+        About.checkPrivacy();
+        About.checkTerms();
         About.checkVersion();
         About.backButton();
         Main.onScreen();
@@ -109,5 +105,10 @@ public class MenuTest {
         Main.onScreen();
         Menu.logoClick();
         Main.onScreen();
+    }
+    @Test
+    @DisplayName("Выход из системы")
+    public void logOut(){
+        Menu.logOut();
     }
 }

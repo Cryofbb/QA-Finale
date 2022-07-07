@@ -20,22 +20,22 @@ import java.io.File;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.junit4.DisplayName;
-import ru.iteco.fmhandroid.ui.screens.AuthScreen;
-import ru.iteco.fmhandroid.ui.screens.CreateNewsScreen;
-import ru.iteco.fmhandroid.ui.screens.FilterScreen;
-import ru.iteco.fmhandroid.ui.screens.MainScreen;
-import ru.iteco.fmhandroid.ui.screens.MenuScreen;
-import ru.iteco.fmhandroid.ui.screens.NewsScreen;
+import ru.iteco.fmhandroid.ui.steps.AuthStep;
+import ru.iteco.fmhandroid.ui.steps.CreateNewsStep;
+import ru.iteco.fmhandroid.ui.steps.FilterStep;
+import ru.iteco.fmhandroid.ui.steps.MainStep;
+import ru.iteco.fmhandroid.ui.steps.MenuStep;
+import ru.iteco.fmhandroid.ui.steps.NewsStep;
 
 @RunWith(AllureAndroidJUnit4.class)
 
 public class NewsTest {
-    AuthScreen Auth = new AuthScreen();
-    MenuScreen Menu = new MenuScreen();
-    MainScreen Main = new MainScreen();
-    FilterScreen Filter = new FilterScreen();
-    NewsScreen News = new NewsScreen();
-    CreateNewsScreen Edit = new CreateNewsScreen();
+    AuthStep Auth = new AuthStep();
+    MenuStep Menu = new MenuStep();
+    MainStep Main = new MainStep();
+    FilterStep Filter = new FilterStep();
+    NewsStep News = new NewsStep();
+    CreateNewsStep Edit = new CreateNewsStep();
     String date = getCurrentDate();
     String time = getCurrentTime();
     String title = "Title " + getCurrentTime();
@@ -62,16 +62,8 @@ public class NewsTest {
         } catch (NoMatchingViewException e) {
             Menu.logOut();
         }
-        Auth.loginFill("login2");
-        Auth.passwordFill("password2");
-        Auth.buttonClick();
-        SystemClock.sleep(3000);
+        Auth.validAuth();
         Main.openAllNews();
-    }
-
-    @After
-    public void logOff() {
-        Menu.logOut();
     }
 
     @Test
@@ -94,12 +86,7 @@ public class NewsTest {
     public void newsDelete() {
         News.edit();
         Edit.add();
-        Edit.categorySelect();
-        Edit.enterTitle(title);
-        Edit.enterDate(date);
-        Edit.enterTime(time);
-        Edit.enterDescription(description);
-        closeSoftKeyboard();
+        Edit.fillNewsAndCheckFields(date, time, title, description);
         Edit.saveButton();
         Edit.checkIsDisplayed(title);
         Edit.deleteWithTitle(title);
@@ -111,12 +98,7 @@ public class NewsTest {
         String newTitle = "New title";
         News.edit();
         Edit.add();
-        Edit.categorySelect();
-        Edit.enterTitle(title);
-        Edit.enterDate(date);
-        Edit.enterTime(time);
-        Edit.enterDescription(description);
-        closeSoftKeyboard();
+        Edit.fillNewsAndCheckFields(date, time, title, description);
         Edit.saveButton();
         Edit.checkIsDisplayed(title);
         Edit.edit(title);
@@ -133,12 +115,7 @@ public class NewsTest {
         String newTitle = "New title";
         News.edit();
         Edit.add();
-        Edit.categorySelect();
-        Edit.enterTitle(title);
-        Edit.enterDate(date);
-        Edit.enterTime(time);
-        Edit.enterDescription(description);
-        closeSoftKeyboard();
+        Edit.fillNewsAndCheckFields(date, time, title, description);
         Edit.saveButton();
         Edit.checkIsDisplayed(title);
         Edit.edit(title);

@@ -1,14 +1,13 @@
-package ru.iteco.fmhandroid.ui.screens;
+package ru.iteco.fmhandroid.ui.steps;
 
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.matcher.ViewMatchers.isClickable;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 
 import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.ui.elements.MenuElements;
 
-public class MenuScreen {
+public class MenuStep {
     MenuElements Menu = new MenuElements();
 
     public void openClaims() {

@@ -15,7 +15,6 @@ import androidx.test.espresso.NoMatchingViewException;
 import androidx.test.espresso.contrib.RecyclerViewActions;
 import androidx.test.rule.ActivityTestRule;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -25,22 +24,22 @@ import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.Allure;
 import io.qameta.allure.kotlin.junit4.DisplayName;
 import ru.iteco.fmhandroid.R;
-import ru.iteco.fmhandroid.ui.screens.AuthScreen;
-import ru.iteco.fmhandroid.ui.screens.ClaimsScreen;
-import ru.iteco.fmhandroid.ui.screens.CreateClaimScreen;
-import ru.iteco.fmhandroid.ui.screens.FilterScreen;
-import ru.iteco.fmhandroid.ui.screens.MenuScreen;
-import ru.iteco.fmhandroid.ui.screens.SingleClaimScreen;
+import ru.iteco.fmhandroid.ui.steps.AuthStep;
+import ru.iteco.fmhandroid.ui.steps.ClaimsStep;
+import ru.iteco.fmhandroid.ui.steps.CreateClaimStep;
+import ru.iteco.fmhandroid.ui.steps.FilterStep;
+import ru.iteco.fmhandroid.ui.steps.MenuStep;
+import ru.iteco.fmhandroid.ui.steps.SingleClaimStep;
 
 @RunWith(AllureAndroidJUnit4.class)
 
 public class ClaimTest {
-    AuthScreen Auth = new AuthScreen();
-    MenuScreen Menu = new MenuScreen();
-    CreateClaimScreen Claim = new CreateClaimScreen();
-    FilterScreen Filter = new FilterScreen();
-    ClaimsScreen ClaimScreen = new ClaimsScreen();
-    SingleClaimScreen SingleClaim = new SingleClaimScreen();
+    AuthStep Auth = new AuthStep();
+    MenuStep Menu = new MenuStep();
+    CreateClaimStep Claim = new CreateClaimStep();
+    FilterStep Filter = new FilterStep();
+    ClaimsStep ClaimScreen = new ClaimsStep();
+    SingleClaimStep SingleClaim = new SingleClaimStep();
     String title = "Title " + getCurrentTime();
     String title2 = "Title " + getCurrentTime() + " " + getCurrentDate();
     String description = "Description  " + getCurrentDate();
@@ -59,16 +58,8 @@ public class ClaimTest {
         } catch (NoMatchingViewException e) {
             Menu.logOut();
         }
-        Auth.loginFill("login2");
-        Auth.passwordFill("password2");
-        Auth.buttonClick();
-        SystemClock.sleep(3000);
+        Auth.validAuth();
         Menu.openClaims();
-    }
-
-    @After
-    public void logOff() {
-        Menu.logOut();
     }
 
     @Test
@@ -86,13 +77,7 @@ public class ClaimTest {
     @DisplayName("Создание заявки, добавление комментария, дроп, взятие в работу и выполнение заявки")
     public void claimCreate() {
         ClaimScreen.addNew();
-        SystemClock.sleep(3000);
-        Claim.enterExecutor();
-        Claim.enterTitle(title);
-        Claim.enterDescription(description);
-        Claim.enterDate(date);
-        Claim.enterTime(time);
-        Espresso.closeSoftKeyboard();
+        Claim.fillClaimAndCheckFields(date, time, title, description);
         Claim.save();
         ClaimScreen.filter();
         Filter.openCheck();
@@ -122,13 +107,7 @@ public class ClaimTest {
     @DisplayName("Отмена заявки")
     public void claimCancel() {
         ClaimScreen.addNew();
-        SystemClock.sleep(3000);
-        Claim.enterExecutor();
-        Claim.enterTitle(title);
-        Claim.enterDescription(description);
-        Claim.enterDate(date);
-        Claim.enterTime(time);
-        Espresso.closeSoftKeyboard();
+        Claim.fillClaimAndCheckFields(date, time, title, description);
         Claim.save();
         ClaimScreen.filter();
         Filter.openCheck();

@@ -1,17 +1,25 @@
-package ru.iteco.fmhandroid.ui.screens;
+package ru.iteco.fmhandroid.ui.steps;
 
+import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
+import static org.hamcrest.Matchers.allOf;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.not;
 import static ru.iteco.fmhandroid.ui.utils.Utils.nestedScrollTo;
+import static ru.iteco.fmhandroid.ui.utils.Utils.withIndex;
 
 import io.qameta.allure.kotlin.Allure;
+import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.elements.NewsElements;
 import ru.iteco.fmhandroid.ui.utils.Utils;
 
-public class NewsScreen {
+public class NewsStep {
     NewsElements News = new NewsElements();
 
     public void onScreen() {
@@ -36,17 +44,7 @@ public class NewsScreen {
 
     public String getTitle() {
         Allure.step("Получение первого заголовка");
-        return Utils.TextHelpers.getText(News.titleWithIndex);
-    }
-
-    public String getLastTitle() {
-        Allure.step("Получение последнего заголовка");
-        return Utils.TextHelpers.getText(News.lastNews);
-    }
-
-    public String getTitleAgain() {
-        Allure.step("Получение первого заголовка");
-        return Utils.TextHelpers.getText(News.firstNews);
+        return Utils.TextHelpers.getText(News.title2);
     }
 
     public void checkDate(String text) {
@@ -57,4 +55,13 @@ public class NewsScreen {
         News.title.perform(nestedScrollTo())
                 .check(matches(isDisplayed()));
     }
+    public void checkMatched(String title){
+        Allure.step("Проверка соответствия верхнего заголовка изначальному");
+        onView(allOf(withIndex(withId(R.id.news_item_title_text_view),0), withId(R.id.news_item_title_text_view))).check(matches(withText(title)));
+    }
+    public void checkUnmatched(String title){
+        Allure.step("Проверка несоответствия верхнего заголовка изначальному");
+        onView(allOf(withIndex(withId(R.id.news_item_title_text_view),0), withId(R.id.news_item_title_text_view))).check(matches(not(withText(title))));
+    }
+
 }

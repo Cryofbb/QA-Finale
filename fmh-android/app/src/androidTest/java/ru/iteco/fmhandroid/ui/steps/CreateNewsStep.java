@@ -1,5 +1,6 @@
-package ru.iteco.fmhandroid.ui.screens;
+package ru.iteco.fmhandroid.ui.steps;
 
+import static androidx.test.espresso.Espresso.closeSoftKeyboard;
 import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
@@ -25,7 +26,7 @@ import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.elements.EditNewsElements;
 
-public class CreateNewsScreen {
+public class CreateNewsStep {
     EditNewsElements News = new EditNewsElements();
 
     public void onScreen() {
@@ -94,7 +95,7 @@ public class CreateNewsScreen {
     }
 
     public void saveButton() {
-        Allure.step("Нажатие кнопки соранить");
+        Allure.step("Нажатие кнопки сохранить");
         News.save.perform(click());
         SystemClock.sleep(1500);
     }
@@ -127,4 +128,30 @@ public class CreateNewsScreen {
         News.status.perform(click());
         News.descriptionCollapsed.check(matches(not(isDisplayed())));
     }
+
+    public void fillNewsAndCheckFields(String date, String time, String title, String description){
+        Allure.step("Выбор категории");
+        News.editCategory.perform(click());
+        SystemClock.sleep(3000);
+        onData(Matchers.anything())
+                .inRoot(RootMatchers.isPlatformPopup())
+                .atPosition(1)
+                .perform(ViewActions.click());
+        Allure.step("Ввод заголовка " + title);
+        News.editTitle.perform(replaceText(title));
+        Allure.step("Ввод описания" + description);
+        News.editDescription.perform(replaceText(description));
+        Allure.step("Ввод даты" + date);
+        News.editDate.perform(replaceText(date));
+        Allure.step("Ввод времени" + time);
+        News.editTime.perform(replaceText(time));
+        closeSoftKeyboard();
+        Allure.step("Проверка заголовка " + title);
+        News.editTitle.check(matches(withText(title)));
+        Allure.step("Проверка описания" + description);
+        News.editDescription.check(matches(withText(description)));
+        Allure.step("Проверка даты" + date);
+        News.editDate.check(matches(withText(date)));
+        Allure.step("Проверка времени" + time);
+        News.editTime.check(matches(withText(time)));}
 }

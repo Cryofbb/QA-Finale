@@ -1,4 +1,4 @@
-package ru.iteco.fmhandroid.ui.screens;
+package ru.iteco.fmhandroid.ui.steps;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
@@ -10,7 +10,7 @@ import static ru.iteco.fmhandroid.ui.utils.Utils.isDisplayedWithSwipe;
 import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.ui.elements.ClaimsElements;
 
-public class ClaimsScreen {
+public class ClaimsStep {
     ClaimsElements Claims = new ClaimsElements();
 
     public void onScreen() {

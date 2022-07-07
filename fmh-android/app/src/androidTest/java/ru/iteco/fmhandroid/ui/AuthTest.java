@@ -13,13 +13,13 @@ import org.junit.runner.RunWith;
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.Allure;
 import io.qameta.allure.kotlin.junit4.DisplayName;
-import ru.iteco.fmhandroid.ui.screens.AuthScreen;
-import ru.iteco.fmhandroid.ui.screens.MenuScreen;
+import ru.iteco.fmhandroid.ui.steps.AuthStep;
+import ru.iteco.fmhandroid.ui.steps.MenuStep;
 
 @RunWith(AllureAndroidJUnit4.class)
 public class AuthTest {
-    AuthScreen Auth = new AuthScreen();
-    MenuScreen Menu = new MenuScreen();
+    AuthStep Auth = new AuthStep();
+    MenuStep Menu = new MenuStep();
 
     @Rule
     public ActivityTestRule<AppActivity> mActivityTestRule = new ActivityTestRule<>(AppActivity.class);
@@ -67,10 +67,7 @@ public class AuthTest {
     @DisplayName("Вход с валидными данными и последующий выход")
     public void signInOK() {
         Auth.onScreen();
-        Auth.loginFill("login2");
-        Auth.passwordFill("password2");
-        Auth.buttonClick();
-        SystemClock.sleep(2500);
+        Auth.validAuth();
         Menu.logOut();
     }
 }

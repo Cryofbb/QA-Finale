@@ -1,5 +1,6 @@
-package ru.iteco.fmhandroid.ui.screens;
+package ru.iteco.fmhandroid.ui.steps;
 
+import static androidx.test.espresso.Espresso.closeSoftKeyboard;
 import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
@@ -27,7 +28,7 @@ import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.elements.CreateClaimElements;
 
-public class CreateClaimScreen {
+public class CreateClaimStep {
     CreateClaimElements Create = new CreateClaimElements();
 
     public void onScreen() {
@@ -38,30 +39,30 @@ public class CreateClaimScreen {
 
     public void enterTitle(String text) {
 
-        Allure.step("Проверка ссылок");
+        Allure.step("Ввод заголовка");
         Create.title.perform(replaceText(text));
     }
 
     public void enterDate(String text) {
 
-        Allure.step("Проверка ссылок");
+        Allure.step("Ввод даты");
         Create.date.perform(replaceText(text));
     }
 
     public void enterTime(String text) {
 
-        Allure.step("Проверка ссылок");
+        Allure.step("Ввод времени");
         Create.time.perform(replaceText(text));
     }
 
     public void enterDescription(String text) {
 
-        Allure.step("Проверка ссылок");
+        Allure.step("Ввод описания");
         Create.description.perform(replaceText(text));
     }
 
     public void enterExecutor() {
-        Allure.step("Проверка ссылок");
+        Allure.step("Ввод исполнителя");
         Create.executor.perform(click());
         SystemClock.sleep(3000);
         onData(Matchers.anything())
@@ -113,5 +114,39 @@ public class CreateClaimScreen {
         onView(withId(R.id.claim_list_recycler_view)).perform(repeatedlyUntil(swipeUpSlow(), hasDescendant(withText(title)), 10));
         onView(withId(R.id.claim_list_recycler_view)).perform(swipeUpSlow());
         onView(allOf(withId(R.id.executor_name_material_text_view), withParent(withParent(allOf(withId(R.id.claim_list_card), withChild(withChild(withText(title)))))))).perform(click());
+    }
+
+    public void fillClaimAndCheckFields(String date, String time, String title, String description) {
+        SystemClock.sleep(3000);
+        Allure.step("Ввод исполнителя");
+        Create.executor.perform(click());
+        SystemClock.sleep(3000);
+        onData(Matchers.anything())
+                .inRoot(RootMatchers.isPlatformPopup())
+                .atPosition(1)
+                .perform(ViewActions.click());
+        Allure.step("Ввод даты");
+        Create.date.perform(replaceText(date));
+        Allure.step("Ввод времени");
+        Create.time.perform(replaceText(time));
+        Allure.step("Ввод заголовка");
+        Create.title.perform(replaceText(title));
+        Allure.step("Ввод описания");
+        Create.description.perform(replaceText(description));
+        closeSoftKeyboard();
+        Allure.step("Проверка даты");
+        Create.date.check(matches(withText(date)));
+        Allure.step("Проверка времени");
+        Create.time.check(matches(withText(time)));
+        Allure.step("Проверка заголовка");
+        Create.title.check(matches(withText(title)));
+        Allure.step("Проверка описания");
+        Create.description.check(matches(withText(description)));
+        SystemClock.sleep(3000);
+    }
+
+    public void scrollUpAndCheck(String title) {
+        Allure.step("Скролл вверх для проверки наличия заявки");
+        onView(withId(R.id.claim_list_recycler_view)).perform(repeatedlyUntil(swipeDown(), hasDescendant(withText(title)), 10));
     }
 }

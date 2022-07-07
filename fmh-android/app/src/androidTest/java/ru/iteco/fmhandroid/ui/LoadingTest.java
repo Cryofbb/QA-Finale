@@ -8,11 +8,11 @@ import org.junit.runner.RunWith;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.junit4.DisplayName;
-import ru.iteco.fmhandroid.ui.screens.LoadingScreen;
+import ru.iteco.fmhandroid.ui.steps.LoadingStep;
 
 @RunWith(AllureAndroidJUnit4.class)
 public class LoadingTest {
-    LoadingScreen Loading = new LoadingScreen();
+    LoadingStep Loading = new LoadingStep();
 
     @Rule
     public ActivityTestRule<AppActivity> mActivityTestRule = new ActivityTestRule<>(AppActivity.class);

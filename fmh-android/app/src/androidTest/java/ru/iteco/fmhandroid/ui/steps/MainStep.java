@@ -1,4 +1,4 @@
-package ru.iteco.fmhandroid.ui.screens;
+package ru.iteco.fmhandroid.ui.steps;
 
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
@@ -13,7 +13,7 @@ import androidx.test.espresso.matcher.ViewMatchers;
 import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.ui.elements.MainElements;
 
-public class MainScreen {
+public class MainStep {
     MainElements Main = new MainElements();
 
     public void onScreen() {

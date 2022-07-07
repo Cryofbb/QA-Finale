@@ -1,4 +1,4 @@
-package ru.iteco.fmhandroid.ui.screens;
+package ru.iteco.fmhandroid.ui.steps;
 
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.not;
 import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.ui.elements.QuoteElements;
 
-public class QuotesScreen {
+public class QuotesStep {
     QuoteElements Quotes = new QuoteElements();
 
     public void onScreen() {

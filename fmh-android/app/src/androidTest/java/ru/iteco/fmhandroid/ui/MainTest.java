@@ -1,11 +1,7 @@
 package ru.iteco.fmhandroid.ui;
 
 import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.action.ViewActions.repeatedlyUntil;
-import static androidx.test.espresso.action.ViewActions.swipeDown;
-import static androidx.test.espresso.matcher.ViewMatchers.hasDescendant;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
-import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static ru.iteco.fmhandroid.ui.utils.Utils.getCurrentDate;
 import static ru.iteco.fmhandroid.ui.utils.Utils.getCurrentTime;
 
@@ -13,12 +9,10 @@ import android.os.Environment;
 import android.os.SystemClock;
 
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.test.espresso.Espresso;
 import androidx.test.espresso.NoMatchingViewException;
 import androidx.test.espresso.contrib.RecyclerViewActions;
 import androidx.test.rule.ActivityTestRule;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -30,22 +24,22 @@ import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.Allure;
 import io.qameta.allure.kotlin.junit4.DisplayName;
 import ru.iteco.fmhandroid.R;
-import ru.iteco.fmhandroid.ui.screens.AuthScreen;
-import ru.iteco.fmhandroid.ui.screens.ClaimsScreen;
-import ru.iteco.fmhandroid.ui.screens.CreateClaimScreen;
-import ru.iteco.fmhandroid.ui.screens.FilterScreen;
-import ru.iteco.fmhandroid.ui.screens.MainScreen;
-import ru.iteco.fmhandroid.ui.screens.MenuScreen;
+import ru.iteco.fmhandroid.ui.steps.AuthStep;
+import ru.iteco.fmhandroid.ui.steps.ClaimsStep;
+import ru.iteco.fmhandroid.ui.steps.CreateClaimStep;
+import ru.iteco.fmhandroid.ui.steps.FilterStep;
+import ru.iteco.fmhandroid.ui.steps.MainStep;
+import ru.iteco.fmhandroid.ui.steps.MenuStep;
 
 @RunWith(AllureAndroidJUnit4.class)
 
 public class MainTest {
-    AuthScreen Auth = new AuthScreen();
-    MenuScreen Menu = new MenuScreen();
-    MainScreen Main = new MainScreen();
-    CreateClaimScreen Claim = new CreateClaimScreen();
-    FilterScreen Filter = new FilterScreen();
-    ClaimsScreen ClaimScreen = new ClaimsScreen();
+    AuthStep Auth = new AuthStep();
+    MenuStep Menu = new MenuStep();
+    MainStep Main = new MainStep();
+    CreateClaimStep Claim = new CreateClaimStep();
+    FilterStep Filter = new FilterStep();
+    ClaimsStep ClaimScreen = new ClaimsStep();
 
     @Rule
     public ActivityTestRule<AppActivity> mActivityTestRule = new ActivityTestRule<>(AppActivity.class);
@@ -68,15 +62,7 @@ public class MainTest {
         } catch (NoMatchingViewException e) {
             Menu.logOut();
         }
-        Auth.loginFill("login2");
-        Auth.passwordFill("password2");
-        Auth.buttonClick();
-        SystemClock.sleep(3000);
-    }
-
-    @After
-    public void logOff() {
-        Menu.logOut();
+        Auth.validAuth();
     }
 
     @Test
@@ -128,14 +114,8 @@ public class MainTest {
         String date = getCurrentDate();
         String time = getCurrentTime();
         Main.addNewClaim();
-        SystemClock.sleep(3000);
         Claim.onScreen();
-        Claim.enterExecutor();
-        Claim.enterTitle(title);
-        Claim.enterDescription(description);
-        Claim.enterDate(date);
-        Claim.enterTime(time);
-        Espresso.closeSoftKeyboard();
+        Claim.fillClaimAndCheckFields(date, time, title, description);
         Claim.save();
         Main.openAllClaims();
         ClaimScreen.filter();
@@ -146,7 +126,6 @@ public class MainTest {
         RecyclerView recyclerView = mActivityTestRule.getActivity().findViewById(R.id.claim_list_recycler_view);
         onView(withId(R.id.claim_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(recyclerView.getAdapter().getItemCount() - 1));
         SystemClock.sleep(5000);
-        Allure.step("Скролл вверх для проверки наличия заявки");
-        onView(withId(R.id.claim_list_recycler_view)).perform(repeatedlyUntil(swipeDown(), hasDescendant(withText(title)), 10));
+        Claim.scrollUpAndCheck(title);
     }
 }
