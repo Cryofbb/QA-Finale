@@ -1,0 +1,149 @@
+{
+    "name": "Проверка входа с заполнением пробелами формой",
+    "start": 1658484946486,
+    "stop": 1658484950415,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождение в окне авторизации",
+            "start": 1658484949842,
+            "stop": 1658484949842,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка нахождение в окне авторизации",
+            "start": 1658484949844,
+            "stop": 1658484949844,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Заполнение поля логина",
+            "start": 1658484949846,
+            "stop": 1658484949846,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Заполнение поля пароля",
+            "start": 1658484949856,
+            "stop": 1658484949856,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки авторизации",
+            "start": 1658484949865,
+            "stop": 1658484949865,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Предупреждение о недопустимости пустых полей",
+            "start": 1658484950206,
+            "stop": 1658484950206,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "7bcbc962-02f5-4e92-a47b-7c8f1acdd8b8",
+    "historyId": "9728262a30383772a1082c9cf09f8d03",
+    "fullName": "ru.iteco.fmhandroid.uitest.AuthTest.blankAuth",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.uitest"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.uitest.AuthTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "blankAuth"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.uitest.AuthTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(846)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

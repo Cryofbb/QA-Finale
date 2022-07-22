@@ -1,0 +1,85 @@
+{
+    "name": "Переход в раздел новостей с главной страницы",
+    "start": 1658484390758,
+    "stop": 1658484397984,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождения на главном экране",
+            "start": 1658484394014,
+            "stop": 1658484394014,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Открытие новостей",
+            "start": 1658484397236,
+            "stop": 1658484397236,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "fbca679f-5484-4538-97b4-09808799f45f",
+    "historyId": "c3ab951e1703bed999e4451d9d8aff59",
+    "fullName": "ru.iteco.fmhandroid.uitest.MainTest.allNews",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.uitest"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.uitest.MainTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "allNews"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.uitest.MainTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(821)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

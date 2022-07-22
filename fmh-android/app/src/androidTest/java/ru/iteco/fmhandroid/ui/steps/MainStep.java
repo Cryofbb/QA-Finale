@@ -8,6 +8,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibilit
 import static org.hamcrest.Matchers.not;
 import static ru.iteco.fmhandroid.ui.utils.Utils.nestedScrollTo;
 
+import android.os.SystemClock;
+
 import androidx.test.espresso.matcher.ViewMatchers;
 
 import io.qameta.allure.kotlin.Allure;
@@ -49,12 +51,14 @@ public class MainStep {
     public void expandSingleNews() {
         Allure.step("Раскрытие новости");
         Main.title.perform(actionOnItemAtPosition(0, click()));
+        SystemClock.sleep(3000);
         Main.description.check(matches(isDisplayed()));
     }
 
     public void collapseSingleNews() {
         Allure.step("Сворачивание новости");
         Main.categoryIcon.perform(click());
+        SystemClock.sleep(3000);
         Main.descriptionCollapsed.check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
     }
 

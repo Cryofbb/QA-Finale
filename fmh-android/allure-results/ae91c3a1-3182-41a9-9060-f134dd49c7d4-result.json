@@ -1,0 +1,133 @@
+{
+    "name": "Переход в заявки из меню",
+    "start": 1658483978574,
+    "stop": 1658483986451,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождения на главном экране",
+            "start": 1658483981889,
+            "stop": 1658483981889,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Заполнение поля логина",
+            "start": 1658483981933,
+            "stop": 1658483981933,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Заполнение поля пароля",
+            "start": 1658483981955,
+            "stop": 1658483981955,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки авторизации",
+            "start": 1658483981970,
+            "stop": 1658483981970,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Открытие раздела Claims",
+            "start": 1658483985295,
+            "stop": 1658483985295,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "ae91c3a1-3182-41a9-9060-f134dd49c7d4",
+    "historyId": "eb41f75481318e6eb97a8e742f5382bd",
+    "fullName": "ru.iteco.fmhandroid.uitest.MenuTest.claimsMenuCheck",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.uitest"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.uitest.MenuTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "claimsMenuCheck"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.uitest.MenuTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(786)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

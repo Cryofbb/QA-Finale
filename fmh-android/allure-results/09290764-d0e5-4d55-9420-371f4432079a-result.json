@@ -1,0 +1,101 @@
+{
+    "name": "Сворачивание и разворачивание раздела заявок",
+    "start": 1658484350579,
+    "stop": 1658484359521,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождения на главном экране",
+            "start": 1658484354557,
+            "stop": 1658484354558,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Сворачивание все заявок",
+            "start": 1658484358497,
+            "stop": 1658484358497,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Раскрытие все заявок",
+            "start": 1658484358864,
+            "stop": 1658484358864,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "09290764-d0e5-4d55-9420-371f4432079a",
+    "historyId": "60873c567615b3215f6933a27d50a3",
+    "fullName": "ru.iteco.fmhandroid.uitest.MainTest.expandClaims",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.uitest"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.uitest.MainTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "expandClaims"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.uitest.MainTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(821)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

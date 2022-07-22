@@ -1,0 +1,117 @@
+{
+    "name": "Кликабельность логотипа",
+    "start": 1658483044818,
+    "stop": 1658483049104,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождения на главном экране",
+            "start": 1658483048200,
+            "stop": 1658483048200,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка нахождения на главном экране",
+            "start": 1658483048204,
+            "stop": 1658483048204,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на логотип",
+            "start": 1658483048217,
+            "stop": 1658483048217,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка нахождения на главном экране",
+            "start": 1658483048486,
+            "stop": 1658483048486,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "a64083d5-9c83-436a-8cfe-57353108d15f",
+    "historyId": "1c1bcf31b7061f59a9193faf6ee4b968",
+    "fullName": "ru.iteco.fmhandroid.uitest.MenuTest.logoClickCheck",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.uitest"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.uitest.MenuTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "logoClickCheck"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.uitest.MenuTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(716)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

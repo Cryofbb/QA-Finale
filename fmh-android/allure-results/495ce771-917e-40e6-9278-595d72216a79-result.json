@@ -1,0 +1,440 @@
+{
+    "name": "Создание заявки, добавление комментария, дроп, взятие в работу и выполнение заявки",
+    "start": 1658485675453,
+    "stop": 1658485717976,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "broken",
+    "statusDetails": {
+        "message": "No views in hierarchy found matching: an instance of android.widget.TextView and view.getText() with or without transformation to match: is \"Editing\"\n\nView Hierarchy:\n+>DecorView{id=-1, visibility=VISIBLE, width=1080, height=2280, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params={(0,0)(fillxfill) ty=BASE_APPLICATION wanim=0x10302fe\n  fl=LAYOUT_IN_SCREEN LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS\n  pfl=FORCE_DRAW_STATUS_BAR_BACKGROUND}, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3} \n|\n+->LinearLayout{id=-1, visibility=VISIBLE, width=1080, height=2148, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@b7ba81f, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+-->ViewStub{id=16908692, res-name=action_mode_bar_stub, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@7da376c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-->FrameLayout{id=-1, visibility=VISIBLE, width=1080, height=2065, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@c0bc9ca, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=83.0, child-count=1} \n|\n+--->FitWindowsLinearLayout{id=2131230784, res-name=action_bar_root, visibility=VISIBLE, width=1080, height=2065, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@b2c2bb1, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+---->ViewStubCompat{id=2131230812, res-name=action_mode_bar_stub, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@304b896, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+---->ContentFrameLayout{id=16908290, res-name=content, visibility=VISIBLE, width=1080, height=2065, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@2c20804, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+----->FragmentContainerView{id=2131231187, res-name=nav_host_fragment, visibility=VISIBLE, width=1080, height=2065, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@8cbc822, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+------>FragmentContainerView{id=2131231187, res-name=nav_host_fragment, visibility=VISIBLE, width=1080, height=2065, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@f59a070, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+------->LinearLayout{id=-1, visibility=VISIBLE, width=1080, height=2065, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@9e4d70f, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+-------->ConstraintLayout{id=2131230947, res-name=container_custom_app_bar_include_on_fragment_open_claim, visibility=VISIBLE, width=1080, height=220, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@3e69907, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=7} \n|\n+--------->AppCompatImageButton{id=2131231124, res-name=main_menu_image_button, desc=Main menu, visibility=VISIBLE, width=132, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@e397a34, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=44.0} \n|\n+--------->AppCompatImageButton{id=2131230735, res-name=about_back_image_button, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9ed105d, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+--------->MaterialTextView{id=2131230974, res-name=custom_app_bar_title_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9da7dd2, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=First Moscow, input-type=0, ime-target=false, has-links=false} \n|\n+--------->MaterialTextView{id=2131230973, res-name=custom_app_bar_sub_title_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@6c9bea3, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Claim, input-type=0, ime-target=false, has-links=false} \n|\n+--------->AppCompatImageView{id=2131231413, res-name=trademark_image_view, visibility=VISIBLE, width=552, height=132, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@10e05a0, tag=null, root-is-layout-requested=false, has-input-connection=false, x=176.0, y=44.0} \n|\n+--------->AppCompatImageButton{id=2131230871, res-name=authorization_image_button, desc=Authorization, visibility=VISIBLE, width=132, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@26f5559, tag=null, root-is-layout-requested=false, has-input-connection=false, x=904.0, y=44.0} \n|\n+--------->AppCompatImageButton{id=2131231248, res-name=our_mission_image_button, desc=Our Mission, visibility=VISIBLE, width=132, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@13ea51e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=728.0, y=44.0} \n|\n+-------->NestedScrollView{id=-1, visibility=VISIBLE, width=1080, height=1845, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@edddbcc, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=220.0, child-count=1} \n|\n+--------->MaterialCardView{id=-1, visibility=VISIBLE, width=1014, height=1792, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@22bf52a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=33.0, y=33.0, is-checked=false, child-count=1} \n|\n+---------->ConstraintLayout{id=-1, visibility=VISIBLE, width=1014, height=1792, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@9ee7439, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=26} \n|\n+----------->AppCompatImageView{id=-1, visibility=VISIBLE, width=1013, height=93, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f070a7e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=1.0, y=0.0} \n|\n+----------->MaterialTextView{id=2131231404, res-name=title_label_text_view, visibility=VISIBLE, width=119, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@6a60bdf, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=20.0, text=Title, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131231408, res-name=title_text_view, visibility=VISIBLE, width=807, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9cb302c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=163.0, y=17.0, text=Title 10:27, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231004, res-name=divider1_image_view, visibility=VISIBLE, width=1013, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@2391af5, tag=null, root-is-layout-requested=false, has-input-connection=false, x=1.0, y=93.0} \n|\n+----------->MaterialTextView{id=2131231045, res-name=executor_name_label_text_view, visibility=VISIBLE, width=196, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@705508a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=116.0, text=Executor, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131231047, res-name=executor_name_text_view, visibility=VISIBLE, width=730, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@8986fb, tag=null, root-is-layout-requested=false, has-input-connection=false, x=240.0, y=113.0, text=NOT ASSIGNED, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231005, res-name=divider2_image_view, visibility=VISIBLE, width=164, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@2d12318, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=189.0} \n|\n+----------->MaterialTextView{id=2131231276, res-name=plane_date_label_text_view, visibility=VISIBLE, width=164, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@84d7171, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=209.0, text=Plan date, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131231277, res-name=plane_date_text_view, visibility=VISIBLE, width=224, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@fefeb56, tag=null, root-is-layout-requested=false, has-input-connection=false, x=613.0, y=209.0, text=22.07.2022, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131231275, res-name=plan_time_text_view, visibility=VISIBLE, width=111, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@d5f97d7, tag=null, root-is-layout-requested=false, has-input-connection=false, x=859.0, y=209.0, text=10:27, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231006, res-name=divider3_image_view, visibility=VISIBLE, width=926, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@94158c4, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=285.0} \n|\n+----------->AppCompatImageView{id=2131231354, res-name=status_icon_image_view, visibility=VISIBLE, width=413, height=83, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@576b3ad, tag=null, root-is-layout-requested=false, has-input-connection=false, x=301.0, y=316.0} \n|\n+----------->MaterialTextView{id=2131231355, res-name=status_label_text_view, visibility=VISIBLE, width=102, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@31766e2, tag=null, root-is-layout-requested=false, has-input-connection=false, x=456.0, y=323.0, text=Open, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialCardView{id=2131230987, res-name=description_material_card_view, visibility=VISIBLE, width=926, height=147, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b5d3d30, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=427.0, is-checked=false, child-count=1} \n|\n+------------>MaterialTextView{id=2131230990, res-name=description_text_view, visibility=VISIBLE, width=469, height=59, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@277dda9, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=44.0, text=Description  22.07.2022, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231007, res-name=divider4_image_view, visibility=VISIBLE, width=926, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@c490f2e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=613.0} \n|\n+----------->MaterialTextView{id=2131230869, res-name=author_label_text_view, visibility=VISIBLE, width=160, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@94faacf, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=636.0, text=Author, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131230870, res-name=author_name_text_view, visibility=VISIBLE, width=766, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@810fc5c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=204.0, y=633.0, text=Лебедев Данил Александрович, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231008, res-name=divider5_image_view, visibility=VISIBLE, width=136, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@747ab65, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=709.0} \n|\n+----------->MaterialTextView{id=2131230967, res-name=create_data_label_text_view, visibility=VISIBLE, width=136, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@4daf03a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=729.0, text=Created, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131230968, res-name=create_data_text_view, visibility=VISIBLE, width=224, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@d4624eb, tag=null, root-is-layout-requested=false, has-input-connection=false, x=613.0, y=729.0, text=22.07.2022, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131230969, res-name=create_time_text_view, visibility=VISIBLE, width=111, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@edf8248, tag=null, root-is-layout-requested=false, has-input-connection=false, x=859.0, y=729.0, text=10:28, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231009, res-name=divider6_image_view, visibility=VISIBLE, width=926, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@a8c98e1, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=805.0} \n|\n+----------->MaterialCardView{id=2131230934, res-name=comments_material_card_view, visibility=VISIBLE, width=926, height=681, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@be024c7, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=847.0, is-checked=false, child-count=1} \n|\n+------------>ConstraintLayout{id=-1, visibility=VISIBLE, width=926, height=681, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@1304663, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3} \n|\n+------------->RecyclerView{id=2131230912, res-name=claim_comments_list_recycler_view, visibility=VISIBLE, width=838, height=542, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@2d9fde, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=28.0, child-count=2} \n|\n+-------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=838, height=271, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@d5c7c51, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=6} \n|\n+--------------->MaterialTextView{id=2131230930, res-name=comment_description_text_view, visibility=VISIBLE, width=750, height=88, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@5e7ccb6, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=17.0, text=10:27, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->AppCompatImageButton{id=2131231024, res-name=edit_comment_image_button, desc=button edit comment, visibility=VISIBLE, width=88, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@ed5cdb7, tag=null, root-is-layout-requested=false, has-input-connection=false, x=750.0, y=17.0} \n|\n+--------------->MaterialTextView{id=2131230933, res-name=commentator_name_text_view, visibility=VISIBLE, width=501, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@8408924, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=193.0, text=Лебедев Данил Александрович, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->MaterialTextView{id=2131230929, res-name=comment_date_text_view, visibility=VISIBLE, width=207, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@31b8c8d, tag=null, root-is-layout-requested=false, has-input-connection=false, x=501.0, y=193.0, text=22.07.2022, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->MaterialTextView{id=2131230932, res-name=comment_time_text_view, visibility=VISIBLE, width=108, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@99bfe42, tag=null, root-is-layout-requested=false, has-input-connection=false, x=730.0, y=193.0, text=07:28, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->AppCompatImageView{id=-1, visibility=VISIBLE, width=838, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@7ef8e53, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=268.0} \n|\n+-------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=838, height=271, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@9af139a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=271.0, child-count=6} \n|\n+--------------->MaterialTextView{id=2131230930, res-name=comment_description_text_view, visibility=VISIBLE, width=750, height=88, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@aa074cb, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=17.0, text=Drop, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->AppCompatImageButton{id=2131231024, res-name=edit_comment_image_button, desc=button edit comment, visibility=VISIBLE, width=88, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9e9c4a8, tag=null, root-is-layout-requested=false, has-input-connection=false, x=750.0, y=17.0} \n|\n+--------------->MaterialTextView{id=2131230933, res-name=commentator_name_text_view, visibility=VISIBLE, width=501, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@4641bc1, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=193.0, text=Лебедев Данил Александрович, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->MaterialTextView{id=2131230929, res-name=comment_date_text_view, visibility=VISIBLE, width=207, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@75acf66, tag=null, root-is-layout-requested=false, has-input-connection=false, x=501.0, y=193.0, text=22.07.2022, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->MaterialTextView{id=2131230932, res-name=comment_time_text_view, visibility=VISIBLE, width=108, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@bbf92a7, tag=null, root-is-layout-requested=false, has-input-connection=false, x=730.0, y=193.0, text=07:28, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->AppCompatImageView{id=-1, visibility=VISIBLE, width=838, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@36a8354, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=268.0} \n|\n+------------->MaterialTextView{id=-1, visibility=VISIBLE, width=245, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f55b2fd, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=587.0, text=Add comment, input-type=0, ime-target=false, has-links=false} \n|\n+------------->AppCompatImageButton{id=2131230848, res-name=add_comment_image_button, desc=button add comment, visibility=VISIBLE, width=83, height=83, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b47bf2, tag=null, root-is-layout-requested=false, has-input-connection=false, x=799.0, y=570.0} \n|\n+----------->AppCompatImageButton{id=2131230926, res-name=close_image_button, desc=button close, visibility=VISIBLE, width=83, height=83, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9c8b243, tag=null, root-is-layout-requested=false, has-input-connection=false, x=66.0, y=1619.0} \n|\n+----------->AppCompatImageButton{id=2131231356, res-name=status_processing_image_button, desc=button change status, visibility=VISIBLE, width=132, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@39680c0, tag=null, root-is-layout-requested=false, has-input-connection=false, x=585.0, y=1594.0} \n|\n+----------->AppCompatImageButton{id=2131231027, res-name=edit_processing_image_button, desc=button settings, visibility=VISIBLE, width=132, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@6cf81f9, tag=null, root-is-layout-requested=false, has-input-connection=false, x=816.0, y=1594.0} \n|\n+->View{id=16908336, res-name=navigationBarBackground, visibility=VISIBLE, width=1080, height=132, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@f8a653e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=2148.0} \n|\n+->View{id=16908335, res-name=statusBarBackground, visibility=VISIBLE, width=1080, height=83, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@4ba2f9f, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} ",
+        "trace": "androidx.test.espresso.NoMatchingViewException: No views in hierarchy found matching: an instance of android.widget.TextView and view.getText() with or without transformation to match: is \"Editing\"\n\nView Hierarchy:\n+>DecorView{id=-1, visibility=VISIBLE, width=1080, height=2280, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params={(0,0)(fillxfill) ty=BASE_APPLICATION wanim=0x10302fe\n  fl=LAYOUT_IN_SCREEN LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS\n  pfl=FORCE_DRAW_STATUS_BAR_BACKGROUND}, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3} \n|\n+->LinearLayout{id=-1, visibility=VISIBLE, width=1080, height=2148, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@b7ba81f, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+-->ViewStub{id=16908692, res-name=action_mode_bar_stub, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@7da376c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-->FrameLayout{id=-1, visibility=VISIBLE, width=1080, height=2065, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@c0bc9ca, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=83.0, child-count=1} \n|\n+--->FitWindowsLinearLayout{id=2131230784, res-name=action_bar_root, visibility=VISIBLE, width=1080, height=2065, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@b2c2bb1, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+---->ViewStubCompat{id=2131230812, res-name=action_mode_bar_stub, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@304b896, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+---->ContentFrameLayout{id=16908290, res-name=content, visibility=VISIBLE, width=1080, height=2065, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@2c20804, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+----->FragmentContainerView{id=2131231187, res-name=nav_host_fragment, visibility=VISIBLE, width=1080, height=2065, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@8cbc822, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+------>FragmentContainerView{id=2131231187, res-name=nav_host_fragment, visibility=VISIBLE, width=1080, height=2065, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@f59a070, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+------->LinearLayout{id=-1, visibility=VISIBLE, width=1080, height=2065, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@9e4d70f, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+-------->ConstraintLayout{id=2131230947, res-name=container_custom_app_bar_include_on_fragment_open_claim, visibility=VISIBLE, width=1080, height=220, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@3e69907, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=7} \n|\n+--------->AppCompatImageButton{id=2131231124, res-name=main_menu_image_button, desc=Main menu, visibility=VISIBLE, width=132, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@e397a34, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=44.0} \n|\n+--------->AppCompatImageButton{id=2131230735, res-name=about_back_image_button, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9ed105d, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+--------->MaterialTextView{id=2131230974, res-name=custom_app_bar_title_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9da7dd2, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=First Moscow, input-type=0, ime-target=false, has-links=false} \n|\n+--------->MaterialTextView{id=2131230973, res-name=custom_app_bar_sub_title_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@6c9bea3, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Claim, input-type=0, ime-target=false, has-links=false} \n|\n+--------->AppCompatImageView{id=2131231413, res-name=trademark_image_view, visibility=VISIBLE, width=552, height=132, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@10e05a0, tag=null, root-is-layout-requested=false, has-input-connection=false, x=176.0, y=44.0} \n|\n+--------->AppCompatImageButton{id=2131230871, res-name=authorization_image_button, desc=Authorization, visibility=VISIBLE, width=132, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@26f5559, tag=null, root-is-layout-requested=false, has-input-connection=false, x=904.0, y=44.0} \n|\n+--------->AppCompatImageButton{id=2131231248, res-name=our_mission_image_button, desc=Our Mission, visibility=VISIBLE, width=132, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@13ea51e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=728.0, y=44.0} \n|\n+-------->NestedScrollView{id=-1, visibility=VISIBLE, width=1080, height=1845, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@edddbcc, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=220.0, child-count=1} \n|\n+--------->MaterialCardView{id=-1, visibility=VISIBLE, width=1014, height=1792, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@22bf52a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=33.0, y=33.0, is-checked=false, child-count=1} \n|\n+---------->ConstraintLayout{id=-1, visibility=VISIBLE, width=1014, height=1792, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@9ee7439, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=26} \n|\n+----------->AppCompatImageView{id=-1, visibility=VISIBLE, width=1013, height=93, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f070a7e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=1.0, y=0.0} \n|\n+----------->MaterialTextView{id=2131231404, res-name=title_label_text_view, visibility=VISIBLE, width=119, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@6a60bdf, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=20.0, text=Title, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131231408, res-name=title_text_view, visibility=VISIBLE, width=807, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9cb302c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=163.0, y=17.0, text=Title 10:27, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231004, res-name=divider1_image_view, visibility=VISIBLE, width=1013, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@2391af5, tag=null, root-is-layout-requested=false, has-input-connection=false, x=1.0, y=93.0} \n|\n+----------->MaterialTextView{id=2131231045, res-name=executor_name_label_text_view, visibility=VISIBLE, width=196, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@705508a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=116.0, text=Executor, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131231047, res-name=executor_name_text_view, visibility=VISIBLE, width=730, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@8986fb, tag=null, root-is-layout-requested=false, has-input-connection=false, x=240.0, y=113.0, text=NOT ASSIGNED, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231005, res-name=divider2_image_view, visibility=VISIBLE, width=164, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@2d12318, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=189.0} \n|\n+----------->MaterialTextView{id=2131231276, res-name=plane_date_label_text_view, visibility=VISIBLE, width=164, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@84d7171, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=209.0, text=Plan date, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131231277, res-name=plane_date_text_view, visibility=VISIBLE, width=224, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@fefeb56, tag=null, root-is-layout-requested=false, has-input-connection=false, x=613.0, y=209.0, text=22.07.2022, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131231275, res-name=plan_time_text_view, visibility=VISIBLE, width=111, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@d5f97d7, tag=null, root-is-layout-requested=false, has-input-connection=false, x=859.0, y=209.0, text=10:27, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231006, res-name=divider3_image_view, visibility=VISIBLE, width=926, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@94158c4, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=285.0} \n|\n+----------->AppCompatImageView{id=2131231354, res-name=status_icon_image_view, visibility=VISIBLE, width=413, height=83, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@576b3ad, tag=null, root-is-layout-requested=false, has-input-connection=false, x=301.0, y=316.0} \n|\n+----------->MaterialTextView{id=2131231355, res-name=status_label_text_view, visibility=VISIBLE, width=102, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@31766e2, tag=null, root-is-layout-requested=false, has-input-connection=false, x=456.0, y=323.0, text=Open, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialCardView{id=2131230987, res-name=description_material_card_view, visibility=VISIBLE, width=926, height=147, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b5d3d30, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=427.0, is-checked=false, child-count=1} \n|\n+------------>MaterialTextView{id=2131230990, res-name=description_text_view, visibility=VISIBLE, width=469, height=59, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@277dda9, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=44.0, text=Description  22.07.2022, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231007, res-name=divider4_image_view, visibility=VISIBLE, width=926, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@c490f2e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=613.0} \n|\n+----------->MaterialTextView{id=2131230869, res-name=author_label_text_view, visibility=VISIBLE, width=160, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@94faacf, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=636.0, text=Author, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131230870, res-name=author_name_text_view, visibility=VISIBLE, width=766, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@810fc5c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=204.0, y=633.0, text=Лебедев Данил Александрович, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231008, res-name=divider5_image_view, visibility=VISIBLE, width=136, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@747ab65, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=709.0} \n|\n+----------->MaterialTextView{id=2131230967, res-name=create_data_label_text_view, visibility=VISIBLE, width=136, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@4daf03a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=729.0, text=Created, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131230968, res-name=create_data_text_view, visibility=VISIBLE, width=224, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@d4624eb, tag=null, root-is-layout-requested=false, has-input-connection=false, x=613.0, y=729.0, text=22.07.2022, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialTextView{id=2131230969, res-name=create_time_text_view, visibility=VISIBLE, width=111, height=59, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@edf8248, tag=null, root-is-layout-requested=false, has-input-connection=false, x=859.0, y=729.0, text=10:28, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231009, res-name=divider6_image_view, visibility=VISIBLE, width=926, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@a8c98e1, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=805.0} \n|\n+----------->MaterialCardView{id=2131230934, res-name=comments_material_card_view, visibility=VISIBLE, width=926, height=681, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@be024c7, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=847.0, is-checked=false, child-count=1} \n|\n+------------>ConstraintLayout{id=-1, visibility=VISIBLE, width=926, height=681, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@1304663, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3} \n|\n+------------->RecyclerView{id=2131230912, res-name=claim_comments_list_recycler_view, visibility=VISIBLE, width=838, height=542, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@2d9fde, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=28.0, child-count=2} \n|\n+-------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=838, height=271, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@d5c7c51, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=6} \n|\n+--------------->MaterialTextView{id=2131230930, res-name=comment_description_text_view, visibility=VISIBLE, width=750, height=88, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@5e7ccb6, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=17.0, text=10:27, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->AppCompatImageButton{id=2131231024, res-name=edit_comment_image_button, desc=button edit comment, visibility=VISIBLE, width=88, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@ed5cdb7, tag=null, root-is-layout-requested=false, has-input-connection=false, x=750.0, y=17.0} \n|\n+--------------->MaterialTextView{id=2131230933, res-name=commentator_name_text_view, visibility=VISIBLE, width=501, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@8408924, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=193.0, text=Лебедев Данил Александрович, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->MaterialTextView{id=2131230929, res-name=comment_date_text_view, visibility=VISIBLE, width=207, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@31b8c8d, tag=null, root-is-layout-requested=false, has-input-connection=false, x=501.0, y=193.0, text=22.07.2022, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->MaterialTextView{id=2131230932, res-name=comment_time_text_view, visibility=VISIBLE, width=108, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@99bfe42, tag=null, root-is-layout-requested=false, has-input-connection=false, x=730.0, y=193.0, text=07:28, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->AppCompatImageView{id=-1, visibility=VISIBLE, width=838, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@7ef8e53, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=268.0} \n|\n+-------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=838, height=271, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@9af139a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=271.0, child-count=6} \n|\n+--------------->MaterialTextView{id=2131230930, res-name=comment_description_text_view, visibility=VISIBLE, width=750, height=88, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@aa074cb, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=17.0, text=Drop, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->AppCompatImageButton{id=2131231024, res-name=edit_comment_image_button, desc=button edit comment, visibility=VISIBLE, width=88, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9e9c4a8, tag=null, root-is-layout-requested=false, has-input-connection=false, x=750.0, y=17.0} \n|\n+--------------->MaterialTextView{id=2131230933, res-name=commentator_name_text_view, visibility=VISIBLE, width=501, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@4641bc1, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=193.0, text=Лебедев Данил Александрович, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->MaterialTextView{id=2131230929, res-name=comment_date_text_view, visibility=VISIBLE, width=207, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@75acf66, tag=null, root-is-layout-requested=false, has-input-connection=false, x=501.0, y=193.0, text=22.07.2022, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->MaterialTextView{id=2131230932, res-name=comment_time_text_view, visibility=VISIBLE, width=108, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@bbf92a7, tag=null, root-is-layout-requested=false, has-input-connection=false, x=730.0, y=193.0, text=07:28, input-type=0, ime-target=false, has-links=false} \n|\n+--------------->AppCompatImageView{id=-1, visibility=VISIBLE, width=838, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@36a8354, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=268.0} \n|\n+------------->MaterialTextView{id=-1, visibility=VISIBLE, width=245, height=53, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f55b2fd, tag=null, root-is-layout-requested=false, has-input-connection=false, x=44.0, y=587.0, text=Add comment, input-type=0, ime-target=false, has-links=false} \n|\n+------------->AppCompatImageButton{id=2131230848, res-name=add_comment_image_button, desc=button add comment, visibility=VISIBLE, width=83, height=83, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b47bf2, tag=null, root-is-layout-requested=false, has-input-connection=false, x=799.0, y=570.0} \n|\n+----------->AppCompatImageButton{id=2131230926, res-name=close_image_button, desc=button close, visibility=VISIBLE, width=83, height=83, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9c8b243, tag=null, root-is-layout-requested=false, has-input-connection=false, x=66.0, y=1619.0} \n|\n+----------->AppCompatImageButton{id=2131231356, res-name=status_processing_image_button, desc=button change status, visibility=VISIBLE, width=132, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@39680c0, tag=null, root-is-layout-requested=false, has-input-connection=false, x=585.0, y=1594.0} \n|\n+----------->AppCompatImageButton{id=2131231027, res-name=edit_processing_image_button, desc=button settings, visibility=VISIBLE, width=132, height=132, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@6cf81f9, tag=null, root-is-layout-requested=false, has-input-connection=false, x=816.0, y=1594.0} \n|\n+->View{id=16908336, res-name=navigationBarBackground, visibility=VISIBLE, width=1080, height=132, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@f8a653e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=2148.0} \n|\n+->View{id=16908335, res-name=statusBarBackground, visibility=VISIBLE, width=1080, height=83, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@4ba2f9f, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n\tat dalvik.system.VMStack.getThreadStackTrace(Native Method)\n\tat java.lang.Thread.getStackTrace(Thread.java:1720)\n\tat androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:12)\n\tat androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)\n\tat androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:8)\n\tat androidx.test.espresso.ViewInteraction.check(ViewInteraction.java:12)\n\tat ru.iteco.fmhandroid.ui.steps.SingleClaimStep.editClaim(SingleClaimStep.java:113)\n\tat ru.iteco.fmhandroid.uitest.ClaimTest.claimCreate(ClaimTest.java:97)\n\tat java.lang.reflect.Method.invoke(Native Method)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)\n\tat androidx.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:549)\n\tat org.junit.rules.RunRules.evaluate(RunRules.java:20)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)\n\tat io.qameta.allure.android.runners.AllureAndroidJUnit4.run(AllureAndroidJUnitRunners.kt:29)\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:115)\n\tat androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:56)\n\tat androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:444)\n\tat android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2189)\n"
+    },
+    "steps": [
+        {
+            "name": "Проверка нахождения на главном экране",
+            "start": 1658485678745,
+            "stop": 1658485678746,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Открытие раздела Claims",
+            "start": 1658485682170,
+            "stop": 1658485682170,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку добавления заявки",
+            "start": 1658485682923,
+            "stop": 1658485682923,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод исполнителя",
+            "start": 1658485686194,
+            "stop": 1658485686194,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод даты",
+            "start": 1658485689909,
+            "stop": 1658485689909,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод времени",
+            "start": 1658485689921,
+            "stop": 1658485689921,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод заголовка",
+            "start": 1658485689935,
+            "stop": 1658485689935,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод описания",
+            "start": 1658485689958,
+            "stop": 1658485689958,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка даты",
+            "start": 1658485690302,
+            "stop": 1658485690303,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка времени",
+            "start": 1658485690304,
+            "stop": 1658485690304,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка заголовка",
+            "start": 1658485690305,
+            "stop": 1658485690305,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка описания",
+            "start": 1658485690307,
+            "stop": 1658485690307,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка ссылок",
+            "start": 1658485693309,
+            "stop": 1658485693309,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Открытие фильтра",
+            "start": 1658485693615,
+            "stop": 1658485693615,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на чекбокс Open",
+            "start": 1658485694027,
+            "stop": 1658485694027,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Подтверждение фильтра",
+            "start": 1658485694379,
+            "stop": 1658485694379,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Скрол до конца, поиск заявки",
+            "start": 1658485694714,
+            "stop": 1658485694714,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Скролл до нужной заявки и ее открытие",
+            "start": 1658485694776,
+            "stop": 1658485694776,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Создание комментария",
+            "start": 1658485709664,
+            "stop": 1658485709664,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка комментария",
+            "start": 1658485712907,
+            "stop": 1658485712907,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Отказ заявки",
+            "start": 1658485712911,
+            "stop": 1658485712911,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод комментария",
+            "start": 1658485715544,
+            "stop": 1658485715544,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка статуса",
+            "start": 1658485715861,
+            "stop": 1658485715861,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Редактирование заявки",
+            "start": 1658485716896,
+            "stop": 1658485716896,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "495ce771-917e-40e6-9278-595d72216a79",
+    "historyId": "6a652f18852359d8c720d2fa9ccc057f",
+    "fullName": "ru.iteco.fmhandroid.uitest.ClaimTest.claimCreate",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.uitest"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.uitest.ClaimTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "claimCreate"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.uitest.ClaimTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(881)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

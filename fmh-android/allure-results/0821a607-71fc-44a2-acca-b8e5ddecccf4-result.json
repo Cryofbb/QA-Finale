@@ -1,0 +1,101 @@
+{
+    "name": "Открытие и закрытие новости",
+    "start": 1658483108715,
+    "stop": 1658483113344,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождения на главном экране",
+            "start": 1658483112115,
+            "stop": 1658483112115,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Раскрытие новости",
+            "start": 1658483112119,
+            "stop": 1658483112120,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Сворачивание новости",
+            "start": 1658483112452,
+            "stop": 1658483112452,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "0821a607-71fc-44a2-acca-b8e5ddecccf4",
+    "historyId": "5aeec9bd2387a8faacabb40ddfd3e2a2",
+    "fullName": "ru.iteco.fmhandroid.uitest.NewsTest.newsOpen",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.uitest"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.uitest.NewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "newsOpen"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.uitest.NewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(716)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

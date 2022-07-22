@@ -1,0 +1,133 @@
+{
+    "name": "Проверка входа с пустой формой",
+    "start": 1658484927993,
+    "stop": 1658484934723,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождение в окне авторизации",
+            "start": 1658484931949,
+            "stop": 1658484931949,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Выход из приложения",
+            "start": 1658484933054,
+            "stop": 1658484933054,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка нахождение в окне авторизации",
+            "start": 1658484933913,
+            "stop": 1658484933913,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки авторизации",
+            "start": 1658484933915,
+            "stop": 1658484933915,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Предупреждение о недопустимости пустых полей",
+            "start": 1658484934264,
+            "stop": 1658484934264,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "df4053e9-2c69-4c8d-aac7-6f251bb754dd",
+    "historyId": "d1056d83415843895b7a82c3dafc6422",
+    "fullName": "ru.iteco.fmhandroid.uitest.AuthTest.emptyAuth",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.uitest"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.uitest.AuthTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "emptyAuth"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.uitest.AuthTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(846)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}
