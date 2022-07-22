@@ -120,12 +120,14 @@ public class CreateNewsStep {
     public void expandSingleNews() {
         Allure.step("Раскрытие новости");
         News.titleIndex.perform(click());
+        SystemClock.sleep(3000);
         News.description.check(matches(isDisplayed()));
     }
 
     public void collapseSingleNews() {
         Allure.step("Сворачивание новости");
         News.status.perform(click());
+        SystemClock.sleep(3000);
         News.descriptionCollapsed.check(matches(not(isDisplayed())));
     }
 
