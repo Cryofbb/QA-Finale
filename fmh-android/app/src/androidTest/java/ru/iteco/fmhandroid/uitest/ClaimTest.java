@@ -70,6 +70,7 @@ public class ClaimTest {
     @DisplayName("Превышение длины заголовка и ошибки пустых полей")
     public void claimTitleExceed() {
         ClaimScreen.addNew();
+        SystemClock.sleep(5000);
         Claim.checkTitle();
         Claim.save();
         Claim.checkEmpty();
