@@ -119,7 +119,7 @@ public class CreateNewsStep {
 
     public void expandSingleNews() {
         Allure.step("Раскрытие новости");
-        News.status.perform(click());
+        News.titleIndex.perform(click());
         SystemClock.sleep(3000);
         News.description.check(matches(isDisplayed()));
     }
