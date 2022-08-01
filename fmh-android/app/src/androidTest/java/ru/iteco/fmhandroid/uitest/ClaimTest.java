@@ -98,7 +98,7 @@ public class ClaimTest {
         Claim.enterTitle(title2);
         Espresso.closeSoftKeyboard();
         Claim.save();
-        onView(withId(R.id.title_text_view)).check(matches(withText(title2)));
+        SingleClaim.checkTitle(title2);
         SingleClaim.takeToWork();
         SingleClaim.status("In progress");
         SingleClaim.scrollDown();

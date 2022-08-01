@@ -135,4 +135,7 @@ public class SingleClaimStep {
         Claim.title.perform(nestedScrollTo())
                 .check(matches(isDisplayed()));
     }
+    public void checkTitle(String title){
+        Claim.title.check(matches(withText(title)));
+    }
 }
