@@ -86,7 +86,6 @@ public class ClaimTest {
         ClaimScreen.filter();
         Filter.openCheck();
         Filter.applyClaims();
-        Allure.step("Скрол до конца, поиск заявки");
         RecyclerView recyclerView = mActivityTestRule.getActivity().findViewById(R.id.claim_list_recycler_view);
         onView(withId(R.id.claim_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(recyclerView.getAdapter().getItemCount() - 1));
         Claim.scrollDown(title);
@@ -116,7 +115,6 @@ public class ClaimTest {
         ClaimScreen.filter();
         Filter.openCheck();
         Filter.applyClaims();
-        Allure.step("Скрол до конца, поиск заявки");
         RecyclerView recyclerView = mActivityTestRule.getActivity().findViewById(R.id.claim_list_recycler_view);
         onView(withId(R.id.claim_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(recyclerView.getAdapter().getItemCount() - 1));
         Claim.scrollDown("Заголовок " + title);

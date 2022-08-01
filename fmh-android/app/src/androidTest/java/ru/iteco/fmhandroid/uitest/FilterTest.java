@@ -114,7 +114,6 @@ public class FilterTest {
         Menu.openNews();
         String start = NewsStep.getTitle();
         NewsStep.sort();
-        Allure.step("Скролл вверх");
         RecyclerView recyclerView = mActivityTestRule.getActivity().findViewById(R.id.news_list_recycler_view);
         onView(withId(R.id.news_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(0));
         SystemClock.sleep(3000);
@@ -122,7 +121,6 @@ public class FilterTest {
         NewsStep.checkUnmatched(start);
         NewsStep.sort();
 
-        Allure.step("Скролл вверх");
         onView(withId(R.id.news_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(0));
         SystemClock.sleep(3000);
 
@@ -139,13 +137,11 @@ public class FilterTest {
         Edit.saveButton();
         String start = NewsStep.getTitle();
         NewsStep.sort();
-        Allure.step("Скролл вверх");
         RecyclerView recyclerView = mActivityTestRule.getActivity().findViewById(R.id.news_list_recycler_view);
         onView(withId(R.id.news_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(0));
         SystemClock.sleep(3000);
         NewsStep.checkUnmatched(start);
         NewsStep.sort();
-        Allure.step("Скролл вверх");
         onView(withId(R.id.news_list_recycler_view)).perform(RecyclerViewActions.scrollToPosition(0));
         SystemClock.sleep(3000);
         NewsStep.checkMatched(start);
