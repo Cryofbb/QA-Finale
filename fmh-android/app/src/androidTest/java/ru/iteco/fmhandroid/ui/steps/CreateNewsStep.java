@@ -39,7 +39,16 @@ public class CreateNewsStep {
         News.delete.perform(click());
         News.okPopup.perform(click());
     }
-
+    public void expandWithTitle(String title) {
+        Allure.step("Удаление новости" + title);
+        onView(allOf(withId(R.id.news_item_title_text_view), withParent(withParent(allOf(withId(R.id.news_item_material_card_view), withChild(withChild(withText(title)))))))).perform(click());
+        onView(allOf(withId(R.id.news_item_description_text_view), withParent(withParent(allOf(withId(R.id.news_item_material_card_view), withChild(withChild(withText(title)))))))).check(matches(isDisplayed()));
+    }
+    public void collapseWithTitle(String title) {
+        Allure.step("Удаление новости" + title);
+        onView(allOf(withId(R.id.news_item_title_text_view), withParent(withParent(allOf(withId(R.id.news_item_material_card_view), withChild(withChild(withText(title)))))))).perform(click());
+        onView(allOf(withId(R.id.news_item_description_text_view), withParent(withParent(allOf(withId(R.id.news_item_material_card_view), withChild(withChild(withText(title)))))))).check(matches(not(isDisplayed())));
+    }
     public void deleteWithTitle(String title) {
         Allure.step("Удаление новости" + title);
         onView(allOf(withId(R.id.delete_news_item_image_view), withParent(withParent(allOf(withId(R.id.news_item_material_card_view), withChild(withChild(withText(title)))))))).perform(click());

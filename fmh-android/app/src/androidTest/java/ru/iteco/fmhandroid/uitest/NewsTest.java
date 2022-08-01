@@ -41,12 +41,13 @@ public class NewsTest {
 
     @Before
     public void authCheck() {
-        SystemClock.sleep(3000);
+        SystemClock.sleep(5000);
         try {
             Main.onScreen();
         } catch (NoMatchingViewException e) {
             Auth.validAuth();
         }
+        SystemClock.sleep(5000);
         Main.openAllNews();
     }
 
@@ -64,6 +65,20 @@ public class NewsTest {
         Edit.expandSingleNews();
         SystemClock.sleep(3000);
         Edit.collapseSingleNews();
+    }
+
+    @Test
+    @DisplayName("Открытие и закрытие новости в контрольной панели")
+    public void newsOpenInPanelv2() {
+        News.edit();
+        Edit.add();
+        Edit.fillNewsAndCheckFields(date, time, title, description);
+        Edit.saveButton();
+        Edit.checkIsDisplayed(title);
+        Edit.expandWithTitle(title);
+        SystemClock.sleep(3000);
+        Edit.collapseWithTitle(title);
+        Edit.deleteWithTitle(title);
     }
 
     @Test

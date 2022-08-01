@@ -42,13 +42,13 @@ public class MainTest {
 
     @Before
     public void authCheck() {
-        SystemClock.sleep(3000);
+        SystemClock.sleep(5000);
         try {
             Main.onScreen();
         } catch (NoMatchingViewException e) {
             Auth.validAuth();
         }
-        SystemClock.sleep(3000);
+        SystemClock.sleep(5000);
     }
 
     @Test

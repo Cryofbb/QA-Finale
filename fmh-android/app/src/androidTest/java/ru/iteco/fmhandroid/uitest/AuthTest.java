@@ -27,7 +27,7 @@ public class AuthTest {
 
     @Before
     public void authCheck() {
-        SystemClock.sleep(3000);
+        SystemClock.sleep(5000);
         try {
             Auth.onScreen();
         } catch (NoMatchingViewException e) {
